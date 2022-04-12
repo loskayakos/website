@@ -15,6 +15,7 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+  
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -33,6 +34,13 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "fonts",
+        path: `${__dirname}/static/fonts/`
+      }
     },
   ],
 };
