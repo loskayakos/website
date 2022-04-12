@@ -1,0 +1,6 @@
+backend:
+  name: github
+  repo: CodersBros/LosKayakos
+  branch: main
+media_folder: static/images
+public_folder: ../../static/images/
