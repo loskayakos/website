@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: CodersBros/LosKayakos
+  repo: CodersBros/Los-Kayakos
   branch: master
   base_url: https://github-auth.krzychu.netlify.app
   publish_mode: editorial_workflow
