@@ -2,7 +2,6 @@ backend:
   name: github
   repo: CodersBros/LosKayakos
   branch: main
-  base_url: 'https://krzychu.netlify.app'
 media_folder: static/images
 public_folder: ../../static/images/
 
