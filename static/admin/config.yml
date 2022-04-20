@@ -3,7 +3,6 @@ backend:
   repo: CodersBros/LosKayakos
   branch: main
   base_url: 'https://krzychu.netlify.app'
-  auth_endpoint: api/auth
 media_folder: static/images
 public_folder: ../../static/images/
 
