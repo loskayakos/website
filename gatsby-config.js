@@ -5,7 +5,15 @@ module.exports = {
   },
   flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
-    'gatsby-plugin-netlify-cms',
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.tsx`,
+        enableIdentityWidget: true,
+        publicPath: `admin`,
+        htmlTitle: `Content Manager`,
+      },
+    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
