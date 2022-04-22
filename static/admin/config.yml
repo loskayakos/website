@@ -18,3 +18,56 @@ collections:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'contact' # Used in routes, e.g., /admin/collections/blog
+    label: 'Contact' # Used in the UI
+    folder: 'content/contact' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'contact' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Phone', name: 'phone', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'company' # Used in routes, e.g., /admin/collections/blog
+    label: 'Company' # Used in the UI
+    folder: 'content/company' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'company' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Nip', name: 'nip', widget: 'string' }
+      - { label: 'Bank Number', name: 'bank_number', widget: 'string' }
+      - { label: 'National Business Registry Number', name: 'regon', widget: 'string' }
+  - name: 'media' # Used in routes, e.g., /admin/collections/blog
+    label: 'Media' # Used in the UI
+    folder: 'content/media' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'media' }
+      - { label: 'Facebook', name: 'fecebook', widget: 'string', hint: 'URL path' }
+      - { label: 'Instagram', name: 'instagram', widget: 'string', hint: 'URL path' }
+  - name: 'hero' # Used in routes, e.g., /admin/collections/blog
+    label: 'Hero' # Used in the UI
+    folder: 'content/hero' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'hero' }
+      - { label: 'Intro', name: 'intro', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'hero-slider' # Used in routes, e.g., /admin/collections/blog
+    label: 'Hero' # Used in the UI
+    folder: 'content/hero-slider' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'hero-slider' }
+      - { label: 'hero_slider', name: 'hero_slider', widget: 'image' }
