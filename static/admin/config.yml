@@ -63,7 +63,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'hero-slider' # Used in routes, e.g., /admin/collections/blog
-    label: 'Hero' # Used in the UI
+    label: 'Hero-Slider' # Used in the UI
     folder: 'content/hero-slider' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
