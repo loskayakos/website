@@ -71,3 +71,28 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'hero-slider' }
       - { label: 'hero_slider', name: 'hero_slider', widget: 'image' }
+  - name: 'offer' # Used in routes, e.g., /admin/collections/blog
+    label: 'Oferta' # Used in the UI
+    folder: 'content/offer' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer' }
+      - { label: 'Główny nagłówek', name: 'title', widget: 'string' }
+      - { label: 'Zdjęcie', name: 'offer_picture', widget: 'image' }
+      - { label: 'Nazwa zdjęcia', name: 'offer_picture_alt', widget: string }
+      - { label: 'Krótki Opis', name: 'short_description', widget: string }
+  - name: 'how-do-we-work' # Used in routes, e.g., /admin/collections/blog
+    label: 'Jak działamy' # Used in the UI
+    folder: 'content/how-do-we-work' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'work' }
+      - { label: 'Numer Kroku', name: 'number_step', widget: 'string', valueType: 'int', min: 1, step: 1, default: 1 }
+      - { label: 'Tytuł kroku', name: 'title', widget: 'string' }
+      - { label: 'Zdjęcie', name: 'work_picture', widget: 'image' }
+      - { label: 'Nazwa zdjęcia', name: 'work_picture_alt', widget: string }
+      - { label: 'Krótki Opis', name: 'short_description', widget: string }
