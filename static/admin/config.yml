@@ -71,6 +71,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'hero-slider' }
       - { label: 'hero_slider', name: 'hero_slider', widget: 'image' }
+      - { label: 'hero_slider_alt', name: 'hero_slider_alt', widget: 'string' }
   - name: 'offer' # Used in routes, e.g., /admin/collections/blog
     label: 'Oferta' # Used in the UI
     folder: 'content/offer' # The path to the folder where the documents are stored
