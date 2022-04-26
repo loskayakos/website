@@ -70,6 +70,7 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'hero-slider' }
+      - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'hero_slider', name: 'hero_slider', widget: 'image' }
       - { label: 'hero_slider_alt', name: 'hero_slider_alt', widget: 'string' }
   - name: 'offer' # Used in routes, e.g., /admin/collections/blog
