@@ -98,6 +98,16 @@ collections:
       - { label: 'Zdjęcie', name: 'work_picture', widget: 'image' }
       - { label: 'Nazwa zdjęcia', name: 'work_picture_alt', widget: string }
       - { label: 'Krótki Opis', name: 'short_description', widget: string }
+      - {
+          label: 'Order',
+          name: 'order',
+          widget: 'number',
+          required: false,
+          valueType: 'int',
+          min: 1,
+          step: 1,
+          default: 1,
+        }
   - name: 'AboutUs' # Used in routes, e.g., /admin/collections/blog
     label: 'O nas' # Used in the UI
     folder: 'content/aboutus' # The path to the folder where the documents are stored
