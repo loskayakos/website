@@ -98,3 +98,17 @@ collections:
       - { label: 'Zdjęcie', name: 'work_picture', widget: 'image' }
       - { label: 'Nazwa zdjęcia', name: 'work_picture_alt', widget: string }
       - { label: 'Krótki Opis', name: 'short_description', widget: string }
+  - name: 'AboutUs' # Used in routes, e.g., /admin/collections/blog
+    label: 'O nas' # Used in the UI
+    folder: 'content/aboutus' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'aboutUs' }
+      - { label: 'Tytuł', name: 'title', title: 'string' }
+      - { label: 'Tytuł grafiki 1', name: 'title_graphic_1', widget: 'string' }
+      - { label: 'Tytuł grafiki 2', name: 'title_graphic_2', widget: 'string' }
+      - { label: 'Tytuł grafiki 3', name: 'title_graphic_3', widget: 'string' }
+      - { label: 'Tytuł grafiki 4', name: 'title_graphic_4', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
