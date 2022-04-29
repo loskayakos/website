@@ -139,7 +139,17 @@ collections:
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     identifier_field: name
     fields: # The fields for each document, usually in front matter
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'hero-slider' }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'gallery-slider' }
       - { label: 'Nazwa', name: 'name', widget: 'string' }
       - { label: 'Zdjęcie', name: 'hero_slider', widget: 'image' }
       - { label: 'Tytuł Zdjęcia', name: 'hero_slider_alt', widget: 'string' }
+      - {
+          label: 'Numer porządkowy',
+          name: 'order',
+          widget: 'number',
+          required: false,
+          valueType: 'int',
+          min: 1,
+          step: 1,
+          default: 1,
+        }
