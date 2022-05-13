@@ -325,7 +325,7 @@ collections:
           widget: 'relation',
           collection: 'prices-list',
           searchFields: ['name'],
-          valueField: 'prices-list',
+          valueField: 'prices_list_id',
           displayFields: ['name', 'prices_list_id'],
           multiple: true,
           hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
