@@ -237,9 +237,10 @@ collections:
           hint: 'dodajemy z listy rozwijanej ceny które będą wchodzić w skład cennika',
         }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'prices-list' }
-      - { label: 'ID ceny', name: 'price_id', widget: 'string', hint: 'niepowtarzalne ID np. ceny wynajmu kajaków' }
+      - { label: 'ID ceny', name: 'prices_list_id', widget: 'string', hint: 'np. cennik kajaków' }
       - { label: 'Nazwa', name: 'name', widget: 'string' }
       - { label: 'Tytuł cennika', name: 'title', widget: 'string', hint: 'np. Ceny wynajmu kajaków ' }
+      - { label: 'Opis cennika', name: 'titdescription_prices_listle', widget: 'string', hint: 'krótki opis cennika ' }
       - {
           label: 'Tytuł kolumny cennika 1',
           name: 'column_title_1',
@@ -262,3 +263,70 @@ collections:
           hint: 'tytuł rezerwowej kolumny cennika wypełniamy jak chcemy mieć dodatkową kolumnę w cenniku',
         }
       - { label: 'Gwiazdka', name: 'star', widget: 'string', required: false, hint: 'wpisujemy tekst do gwiazdki' }
+
+  - name: 'booking' # Used in routes, e.g., /admin/collections/blog
+    label: 'Jak przebiega rezerwacja' # Used in the UI
+    folder: 'content/booking' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'booking' }
+      - {
+          label: 'ID rezerwacji',
+          name: 'booking_id',
+          widget: 'string',
+          hint: 'niepowtarzalne ID np. rezerwacja kajak ',
+        }
+      - { label: 'Nazwa', name: 'name', widget: 'string' }
+      - { label: 'Tytuł sekcji', name: 'name', widget: 'string', hint: 'np Jak przebiega rezerwacja?' }
+      - { label: 'Numer Kroku', name: 'number_step', widget: 'string', valueType: 'int', min: 1, step: 1, default: 1 }
+      - { label: 'Tytuł kroku', name: 'title', widget: 'string', hint: 'wpisujemy tytuł kroku' }
+      - {
+          label: 'Zdjęcie',
+          name: 'booking_picture',
+          widget: 'image',
+          hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w slider',
+        }
+      - { label: 'Nazwa zdjęcia', name: 'booking_picture_alt', widget: string, hint: 'wpisujemy tytuł zdjęcia' }
+      - { label: 'Krótki Opis', name: 'short_description', widget: string, hint: 'wpisujemy, krótki opis przy kroku' }
+      - {
+          label: 'Order',
+          name: 'order',
+          widget: 'number',
+          required: false,
+          valueType: 'int',
+          min: 1,
+          step: 1,
+          default: 1,
+          hint: 'dodajemy numer w jakiej kolejności dany krok ma się wyświetlić',
+        }
+  - name: 'offer-details' # Used in routes, e.g., /admin/collections/blog
+    label: 'Oferta szczegóły' # Used in the UI
+    folder: 'content/offer-details' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: 'Jak przebiega Rezerwacja',
+          name: 'booking',
+          widget: 'relation',
+          collection: 'booking',
+          searchFields: ['name'],
+          valueField: 'booking_id',
+          displayFields: ['name', 'price_id'],
+          multiple: true,
+          hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
+        }
+      - {
+          label: 'Cennik',
+          name: 'prices-list',
+          widget: 'relation',
+          collection: 'prices-list',
+          searchFields: ['name'],
+          valueField: 'prices-list',
+          displayFields: ['name', 'prices_list_id'],
+          multiple: true,
+          hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
+        }
