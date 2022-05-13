@@ -173,3 +173,42 @@ collections:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'contact-text' }
       - { label: 'Tytuł', name: 'title', widget: 'string' }
       - { label: 'Tekst', name: 'body', widget: 'markdown' }
+
+  - name: 'prices' # Used in routes, e.g., /admin/collections/blog
+    label: 'Ceny' # Used in the UI
+    folder: 'content/prices' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'prices' }
+      - { label: 'ID ceny', name: 'price_id', widget: 'string' }
+      - { label: 'Nazwa', name: 'name', widget: 'string' }
+      - { label: 'Cena ', name: 'price', widget: 'number' }
+      - { label: 'Nazwa ceny', name: 'name_price', widget: 'string' }
+  - name: 'prices-list' # Used in routes, e.g., /admin/collections/blog
+    label: 'cennik' # Used in the UI
+    folder: 'content/prices-list' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: 'Ceny',
+          name: 'prices',
+          widget: 'relation',
+          collection: 'prices',
+          searchFields: ['name'],
+          valueField: 'price_id',
+          displayFields: ['name', 'price_id'],
+          multiple: true,
+        }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'prices-list' }
+      - { label: 'Nazwa', name: 'name', widget: 'string' }
+      - { label: 'Tytuł cennika', name: 'title', widget: 'string' hint: 'np. Ceny wynajmu kajaków '}
+      - { label: 'Tytuł kolumny cennika 1', name: 'column_title_1', widget: 'string', required: false, hint: 'np. 1 - 2 dni' }
+      - { label: 'Tytuł kolumny cennika 2', name: 'column_title_2', widget: 'string', required: false, hint: 'np. 3 - 5 dni jeżeli jest gwiazdka musimy ją dodać w tytule' }
+      - { label: 'Gwiazdka', name: 'star', widget: 'string', required: false, hint: 'wpisujemy tekst do gwiazdki' }
+      
+      
+      
