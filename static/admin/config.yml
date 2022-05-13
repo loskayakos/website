@@ -8,39 +8,39 @@ public_folder: ../../static/images/
 
 collections:
   - name: 'about-us' # Used in routes, e.g., /admin/collections/blog
-    label: 'About-Us' # Used in the UI
+    label: 'Tekst o nas' # Used in the UI
     folder: 'content/about-us' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about-us' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tytuł', name: 'title', widget: 'string', hint: 'wpisujemy tytuł intro w kolorze niebieskim' }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'wpisujemy opis o nas' }
   - name: 'contact' # Used in routes, e.g., /admin/collections/blog
-    label: 'Contact' # Used in the UI
+    label: 'Dane kontaktow' # Used in the UI
     folder: 'content/contact' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'contact' }
-      - { label: 'Tytuł', name: 'title', widget: 'string' }
+      - { label: 'Tytuł', name: 'title', widget: 'string', hint: 'wpisujemy tytuł bloku dane kontaktowe' }
       - { label: 'Telefon', name: 'phone', widget: 'string' }
       - { label: 'E-mail', name: 'email', widget: 'string' }
       - { label: 'Lokalizacja', name: 'location', widget: 'string' }
   - name: 'company' # Used in routes, e.g., /admin/collections/blog
-    label: 'Company' # Used in the UI
+    label: 'Dane firmowe' # Used in the UI
     folder: 'content/company' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'company' }
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Tytuł', name: 'title', widget: 'string', hint: 'wpisujemy tytuł bloku nip, regon etc' }
       - { label: 'Nip', name: 'nip', widget: 'string' }
-      - { label: 'Bank Number', name: 'bank_number', widget: 'string' }
-      - { label: 'National Business Registry Number', name: 'regon', widget: 'string' }
+      - { label: 'Numer Banku', name: 'bank_number', widget: 'string' }
+      - { label: 'Regon', name: 'regon', widget: 'string' }
   - name: 'media' # Used in routes, e.g., /admin/collections/blog
     label: 'Media' # Used in the UI
     folder: 'content/media' # The path to the folder where the documents are stored
@@ -49,8 +49,18 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'media' }
-      - { label: 'Facebook', name: 'fecebook', widget: 'string', hint: 'URL path' }
-      - { label: 'Instagram', name: 'instagram', widget: 'string', hint: 'URL path' }
+      - {
+          label: 'Facebook',
+          name: 'fecebook',
+          widget: 'string',
+          hint: 'URL path : https://www.facebook.com/twojafirma',
+        }
+      - {
+          label: 'Instagram',
+          name: 'instagram',
+          widget: 'string',
+          hint: 'URL path : https://www.instagram.com/twojafirma',
+        }
   - name: 'hero' # Used in routes, e.g., /admin/collections/blog
     label: 'Hero' # Used in the UI
     folder: 'content/hero' # The path to the folder where the documents are stored
@@ -63,7 +73,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'hero-slider' # Used in routes, e.g., /admin/collections/blog
-    label: 'Hero-Slider' # Used in the UI
+    label: 'Slider Sekcja O nas ' # Used in the UI
     folder: 'content/hero-slider' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
@@ -71,8 +81,13 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'hero-slider' }
       - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'hero_slider', name: 'hero_slider', widget: 'image' }
-      - { label: 'hero_slider_alt', name: 'hero_slider_alt', widget: 'string' }
+      - {
+          label: 'hero_slider',
+          name: 'hero_slider',
+          widget: 'image',
+          hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w slider',
+        }
+      - { label: 'hero_slider_alt', name: 'hero_slider_alt', widget: 'string', hint: 'wpisujemy tytuł zdjęcia' }
   - name: 'offer' # Used in routes, e.g., /admin/collections/blog
     label: 'Oferta' # Used in the UI
     folder: 'content/offer' # The path to the folder where the documents are stored
@@ -81,10 +96,15 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer' }
-      - { label: 'Główny nagłówek', name: 'title', widget: 'string' }
-      - { label: 'Zdjęcie', name: 'offer_picture', widget: 'image' }
-      - { label: 'Nazwa zdjęcia', name: 'offer_picture_alt', widget: string }
-      - { label: 'Krótki Opis', name: 'short_description', widget: string }
+      - { label: 'Główny nagłówek', name: 'title', widget: 'string', hint: 'wpisujemy tytuł sekcji' }
+      - {
+          label: 'Zdjęcie',
+          name: 'offer_picture',
+          widget: 'image',
+          hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w slider',
+        }
+      - { label: 'Nazwa zdjęcia', name: 'offer_picture_alt', widget: string, hint: 'wpisujemy tytuł zdjęcia' }
+      - { label: 'Krótki Opis', name: 'short_description', widget: string, hint: 'krótki opis w kafelku pod zdjęciem' }
   - name: 'how-do-we-work' # Used in routes, e.g., /admin/collections/blog
     label: 'Jak działamy' # Used in the UI
     folder: 'content/how-do-we-work' # The path to the folder where the documents are stored
@@ -94,10 +114,15 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'work' }
       - { label: 'Numer Kroku', name: 'number_step', widget: 'string', valueType: 'int', min: 1, step: 1, default: 1 }
-      - { label: 'Tytuł kroku', name: 'title', widget: 'string' }
-      - { label: 'Zdjęcie', name: 'work_picture', widget: 'image' }
-      - { label: 'Nazwa zdjęcia', name: 'work_picture_alt', widget: string }
-      - { label: 'Krótki Opis', name: 'short_description', widget: string }
+      - { label: 'Tytuł kroku', name: 'title', widget: 'string', hint: 'wpisujemy tytuł kroku' }
+      - {
+          label: 'Zdjęcie',
+          name: 'work_picture',
+          widget: 'image',
+          hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w slider',
+        }
+      - { label: 'Nazwa zdjęcia', name: 'work_picture_alt', widget: string, hint: 'wpisujemy tytuł zdjęcia' }
+      - { label: 'Krótki Opis', name: 'short_description', widget: string, hint: 'wpisujemy, krótki opis przy kroku' }
       - {
           label: 'Order',
           name: 'order',
@@ -107,6 +132,7 @@ collections:
           min: 1,
           step: 1,
           default: 1,
+          hint: 'dodajemy numer w jakiej kolejności dany krok ma się wyświetlić',
         }
   - name: 'AboutUs' # Used in routes, e.g., /admin/collections/blog
     label: 'O nas' # Used in the UI
@@ -116,12 +142,12 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'aboutUs' }
-      - { label: 'Tytuł', name: 'title', title: 'string' }
+      - { label: 'Tytuł', name: 'title', title: 'string', hint: 'wpisujemy tytuł sekcji o nas' }
       - { label: 'Tytuł grafiki 1', name: 'title_graphic_1', widget: 'string' }
       - { label: 'Tytuł grafiki 2', name: 'title_graphic_2', widget: 'string' }
       - { label: 'Tytuł grafiki 3', name: 'title_graphic_3', widget: 'string' }
       - { label: 'Tytuł grafiki 4', name: 'title_graphic_4', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'wpisujemy tekst o nas' }
   - name: 'offer-subpage' # Used in routes, e.g., /admin/collections/blog
     label: 'Podstrona Oferta' # Used in the UI
     folder: 'content/offer-subpage' # The path to the folder where the documents are stored
@@ -130,8 +156,8 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer-subpage' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Title', name: 'title', widget: 'string', hint: 'tutuł podstrony oferta' }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'krótki tekst pod tytułem' }
   - name: 'gallery-slider' # Used in routes, e.g., /admin/collections/blog
     label: 'Galeria-Slider' # Used in the UI
     folder: 'content/gallery-slider' # The path to the folder where the documents are stored
@@ -140,7 +166,7 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'gallery-slider' }
-      - { label: 'Nazwa', name: 'name', widget: 'string' }
+      - { label: 'Nazwa', name: 'name', widget: 'string', hint: 'nazwa zdjęcia np. zdjęcie nr 1' }
       - { label: 'Zdjęcie', name: 'hero_slider', widget: 'image' }
       - { label: 'Tytuł Zdjęcia', name: 'hero_slider_alt', widget: 'string' }
       - {
@@ -152,6 +178,7 @@ collections:
           min: 1,
           step: 1,
           default: 1,
+          hint: 'numer zdjęcia w jakiej kolejności ma się wyświetlać',
         }
   - name: 'gallery-text' # Used in routes, e.g., /admin/collections/blog
     label: 'Podstrona Galeria' # Used in the UI
@@ -161,8 +188,8 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'gallery-text' }
-      - { label: 'Tytuł', name: 'title', widget: 'string' }
-      - { label: 'Tekst', name: 'body', widget: 'markdown' }
+      - { label: 'Tytuł', name: 'title', widget: 'string', hint: 'tytuł podstrony galeria' }
+      - { label: 'Tekst', name: 'body', widget: 'markdown', hint: 'krótki tekst po tytułem podstrony galeria' }
   - name: 'contact-text' # Used in routes, e.g., /admin/collections/blog
     label: 'Podstrona Kontakt' # Used in the UI
     folder: 'content/contact-text' # The path to the folder where the documents are stored
@@ -171,8 +198,8 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'contact-text' }
-      - { label: 'Tytuł', name: 'title', widget: 'string' }
-      - { label: 'Tekst', name: 'body', widget: 'markdown' }
+      - { label: 'Tytuł', name: 'title', widget: 'string', hint: 'tytuł podstrony kontakt' }
+      - { label: 'Tekst', name: 'body', widget: 'markdown', hint: 'krótki tekst pod tytułem podstrony kontakt' }
 
   - name: 'prices' # Used in routes, e.g., /admin/collections/blog
     label: 'Ceny' # Used in the UI
@@ -182,9 +209,9 @@ collections:
     identifier_field: name
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'prices' }
-      - { label: 'ID ceny', name: 'price_id', widget: 'string' }
-      - { label: 'Nazwa', name: 'name', widget: 'string' }
-      - { label: 'Cena ', name: 'price', widget: 'number' }
+      - { label: 'ID ceny', name: 'price_id', widget: 'string', hint: 'niepowtarzalne ID np. ceny kajak weekand ' }
+      - { label: 'Nazwa', name: 'name', widget: 'string', hint: 'nazwa pod jaką chcemy zapisać' }
+      - { label: 'Cena ', name: 'price', widget: 'number', hint: 'cena bez pln lub zł' }
       - {
           label: 'Nazwa ceny',
           name: 'name_price',
@@ -210,6 +237,7 @@ collections:
           hint: 'dodajemy z listy rozwijanej ceny które będą wchodzić w skład cennika',
         }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'prices-list' }
+      - { label: 'ID ceny', name: 'price_id', widget: 'string', hint: 'niepowtarzalne ID np. ceny wynajmu kajaków' }
       - { label: 'Nazwa', name: 'name', widget: 'string' }
       - { label: 'Tytuł cennika', name: 'title', widget: 'string', hint: 'np. Ceny wynajmu kajaków ' }
       - {
@@ -225,5 +253,12 @@ collections:
           widget: 'string',
           required: false,
           hint: 'np. 3 - 5 dni jeżeli jest gwiazdka musimy ją dodać w tytule',
+        }
+      - {
+          label: 'Tytuł kolumny cennika 3',
+          name: 'column_title_3',
+          widget: 'string',
+          required: false,
+          hint: 'tytuł rezerwowej kolumny cennika wypełniamy jak chcemy mieć dodatkową kolumnę w cenniku',
         }
       - { label: 'Gwiazdka', name: 'star', widget: 'string', required: false, hint: 'wpisujemy tekst do gwiazdki' }
