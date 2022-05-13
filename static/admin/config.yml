@@ -315,7 +315,7 @@ collections:
           collection: 'booking',
           searchFields: ['name'],
           valueField: 'booking_id',
-          displayFields: ['name', 'price_id'],
+          displayFields: ['name', 'booking_id'],
           multiple: true,
           hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
         }
@@ -330,3 +330,4 @@ collections:
           multiple: true,
           hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
         }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer-details' }
