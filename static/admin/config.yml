@@ -240,7 +240,7 @@ collections:
       - { label: 'ID ceny', name: 'prices_list_id', widget: 'string', hint: 'np. cennik kajaków' }
       - { label: 'Nazwa', name: 'name', widget: 'string' }
       - { label: 'Tytuł cennika', name: 'title', widget: 'string', hint: 'np. Ceny wynajmu kajaków ' }
-      - { label: 'Opis cennika', name: 'titdescription_prices_listle', widget: 'string', hint: 'krótki opis cennika ' }
+      - { label: 'Opis cennika', name: 'description_prices_list', widget: 'string', hint: 'krótki opis cennika ' }
       - {
           label: 'Tytuł kolumny cennika 1',
           name: 'column_title_1',
@@ -323,7 +323,7 @@ collections:
           label: 'Cennik',
           name: 'prices-list',
           widget: 'relation',
-          collection: 'prices-list',
+          collection: 'prices-list-relation',
           searchFields: ['name'],
           valueField: 'prices_list_id',
           displayFields: ['name', 'prices_list_id'],
