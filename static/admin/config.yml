@@ -319,15 +319,15 @@ collections:
           multiple: true,
           hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
         }
-      - {
-          label: 'Cennik',
-          name: 'prices-list',
-          widget: 'relation',
-          collection: 'prices-list-relation',
-          searchFields: ['name'],
-          valueField: 'prices_list_id',
-          displayFields: ['name', 'prices_list_id'],
-          multiple: true,
-          hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
-        }
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer-details' }
+      # - {
+      #     label: 'Cennik',
+      #     name: 'prices-list',
+      #     widget: 'relation',
+      #     collection: 'prices-list-relation',
+      #     searchFields: ['name'],
+      #     valueField: 'prices_list_id',
+      #     displayFields: ['name', 'prices_list_id'],
+      #     multiple: true,
+      #     hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
+      #   }
+      # - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer-details' }
