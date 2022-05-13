@@ -185,7 +185,12 @@ collections:
       - { label: 'ID ceny', name: 'price_id', widget: 'string' }
       - { label: 'Nazwa', name: 'name', widget: 'string' }
       - { label: 'Cena ', name: 'price', widget: 'number' }
-      - { label: 'Nazwa ceny', name: 'name_price', widget: 'string' }
+      - {
+          label: 'Nazwa ceny',
+          name: 'name_price',
+          widget: 'string',
+          hint: 'wpisujemy nazwę ceny np. kajak(pn. - czw.)',
+        }
   - name: 'prices-list' # Used in routes, e.g., /admin/collections/blog
     label: 'cennik' # Used in the UI
     folder: 'content/prices-list' # The path to the folder where the documents are stored
@@ -202,6 +207,7 @@ collections:
           valueField: 'price_id',
           displayFields: ['name', 'price_id'],
           multiple: true,
+          hint: 'dodajemy z listy rozwijanej ceny które będą wchodzić w skład cennika',
         }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'prices-list' }
       - { label: 'Nazwa', name: 'name', widget: 'string' }
