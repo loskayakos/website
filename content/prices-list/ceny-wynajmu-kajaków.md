@@ -1,6 +1,7 @@
 ---
 prices:
   - kajak weekand i święta
+  - kajak od poniedziałku do czwartku
 layout: prices-list
 name: Ceny wynajmu kajaków
 title: Ceny wynajmu kajaków
