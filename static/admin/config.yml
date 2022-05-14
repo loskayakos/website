@@ -314,7 +314,7 @@ collections:
           widget: 'relation',
           collection: 'reservations-step',
           searchFields: ['name'],
-          valueField: 'reservation-step',
+          valueField: 'reservation-step_id',
           displayFields: ['name', 'reservation-step_id'],
           multiple: true,
           hint: 'dodajemy z listy rozwijanej kroki  które będą wchodzić w skład jak przebiega rezerwacja',
