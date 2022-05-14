@@ -356,6 +356,33 @@ collections:
           valueField: 'prices_list_id',
           displayFields: ['name', 'prices_list_id'],
           multiple: true,
-          hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
+          hint: 'dodajemy z listy rozwijanej stworzony cennik',
         }
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer-details' }
+      - { label: 'Nazwa', name: 'name', widget: 'string' }
+      - { label: 'Tytuł Strony', name: 'title_offer_details', widget: 'string', hint: 'wpisujemy nagłówek strony' }
+      - { label: 'Tekst', name: 'body', widget: 'markdown', hint: 'krótki tekst pod tytułem strony oferty' }
+      - {
+          label: 'Zdjęcie prawe',
+          name: 'offer-details_picture_right',
+          widget: 'image',
+          hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w stronie',
+        }
+      - {
+          label: 'Nazwa zdjęcia',
+          name: 'offer-details_picture_right_alt',
+          widget: string,
+          hint: 'wpisujemy tytuł zdjęcia',
+        }
+      - {
+          label: 'Zdjęcie lewe',
+          name: 'offer-details_picture_left',
+          widget: 'image',
+          hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w stronie',
+        }
+      - {
+          label: 'Nazwa zdjęcia',
+          name: 'offer-details_picture_left_alt',
+          widget: string,
+          hint: 'wpisujemy tytuł zdjęcia',
+        }
