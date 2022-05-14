@@ -310,9 +310,9 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {
           label: 'Jak przebiega Rezerwacja',
-          name: 'reservation',
+          name: 'booking',
           widget: 'relation',
-          collection: 'booking',
+          collection: 'reservation',
           searchFields: ['name'],
           valueField: 'reservation_id',
           displayFields: ['name', 'reservation_id'],
