@@ -264,43 +264,43 @@ collections:
         }
       - { label: 'Gwiazdka', name: 'star', widget: 'string', required: false, hint: 'wpisujemy tekst do gwiazdki' }
 
-  - name: 'reservation' # Used in routes, e.g., /admin/collections/blog
-    label: 'Jak przebiega rezerwacja' # Used in the UI
-    folder: 'content/reservation' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
-    identifier_field: name
-    fields: # The fields for each document, usually in front matter
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'reservation' }
-      - {
-          label: 'ID rezerwacji',
-          name: 'reservation_id',
-          widget: 'string',
-          hint: 'niepowtarzalne ID np. rezerwacja kajak ',
-        }
-      - { label: 'Nazwa', name: 'name', widget: 'string' }
-      - { label: 'Tytuł sekcji', name: 'name', widget: 'string', hint: 'np Jak przebiega rezerwacja?' }
-      - { label: 'Numer Kroku', name: 'number_step', widget: 'string', valueType: 'int', min: 1, step: 1, default: 1 }
-      - { label: 'Tytuł kroku', name: 'title', widget: 'string', hint: 'wpisujemy tytuł kroku' }
-      - {
-          label: 'Zdjęcie',
-          name: 'reservation_picture',
-          widget: 'image',
-          hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w slider',
-        }
-      - { label: 'Nazwa zdjęcia', name: 'reservation_picture_alt', widget: string, hint: 'wpisujemy tytuł zdjęcia' }
-      - { label: 'Krótki Opis', name: 'short_description', widget: string, hint: 'wpisujemy, krótki opis przy kroku' }
-      - {
-          label: 'Order',
-          name: 'order',
-          widget: 'number',
-          required: false,
-          valueType: 'int',
-          min: 1,
-          step: 1,
-          default: 1,
-          hint: 'dodajemy numer w jakiej kolejności dany krok ma się wyświetlić',
-        }
+  # - name: 'reservation' # Used in routes, e.g., /admin/collections/blog
+  #   label: 'Jak przebiega rezerwacja' # Used in the UI
+  #   folder: 'content/reservation' # The path to the folder where the documents are stored
+  #   create: true # Allow users to create new documents in this collection
+  #   slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+  #   identifier_field: name
+  #   fields: # The fields for each document, usually in front matter
+  #     - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'reservation' }
+  #     - {
+  #         label: 'ID rezerwacji',
+  #         name: 'reservation_id',
+  #         widget: 'string',
+  #         hint: 'niepowtarzalne ID np. rezerwacja kajak ',
+  #       }
+  #     - { label: 'Nazwa', name: 'name', widget: 'string' }
+  #     - { label: 'Tytuł sekcji', name: 'name', widget: 'string', hint: 'np Jak przebiega rezerwacja?' }
+  #     - { label: 'Numer Kroku', name: 'number_step', widget: 'string', valueType: 'int', min: 1, step: 1, default: 1 }
+  #     - { label: 'Tytuł kroku', name: 'title', widget: 'string', hint: 'wpisujemy tytuł kroku' }
+  #     - {
+  #         label: 'Zdjęcie',
+  #         name: 'reservation_picture',
+  #         widget: 'image',
+  #         hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w slider',
+  #       }
+  #     - { label: 'Nazwa zdjęcia', name: 'reservation_picture_alt', widget: string, hint: 'wpisujemy tytuł zdjęcia' }
+  #     - { label: 'Krótki Opis', name: 'short_description', widget: string, hint: 'wpisujemy, krótki opis przy kroku' }
+  #     - {
+  #         label: 'Order',
+  #         name: 'order',
+  #         widget: 'number',
+  #         required: false,
+  #         valueType: 'int',
+  #         min: 1,
+  #         step: 1,
+  #         default: 1,
+  #         hint: 'dodajemy numer w jakiej kolejności dany krok ma się wyświetlić',
+  #       }
   - name: 'offer-details' # Used in routes, e.g., /admin/collections/blog
     label: 'Oferta szczegóły' # Used in the UI
     folder: 'content/offer-details' # The path to the folder where the documents are stored
