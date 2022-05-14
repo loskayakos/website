@@ -264,17 +264,17 @@ collections:
         }
       - { label: 'Gwiazdka', name: 'star', widget: 'string', required: false, hint: 'wpisujemy tekst do gwiazdki' }
 
-  - name: 'reservation-step' # Used in routes, e.g., /admin/collections/blog
+  - name: 'reservation-steps' # Used in routes, e.g., /admin/collections/blog
     label: 'Kroki rezerwacji' # Used in the UI
-    folder: 'content/reservation' # The path to the folder where the documents are stored
+    folder: 'content/reservation-steps' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     identifier_field: name
     fields: # The fields for each document, usually in front matter
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'reservation' }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'reservation-steps' }
       - {
           label: 'ID kroku rezerwacji',
-          name: 'reservation_id',
+          name: 'reservation_step_id',
           widget: 'string',
           hint: 'niepowtarzalne ID np. rezerwacja kajak krok 1 ',
         }
@@ -300,6 +300,35 @@ collections:
           default: 1,
           hint: 'dodajemy numer w jakiej kolejności dany krok ma się wyświetlić',
         }
+
+  - name: 'reservation' # Used in routes, e.g., /admin/collections/blog
+    label: 'Przebieg rezerwacji' # Used in the UI
+    folder: 'content/reservation' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields:
+      - {
+          label: 'Kroki rezerwacji',
+          name: 'reservation-steps',
+          widget: 'relation',
+          collection: 'reservations-step',
+          searchFields: ['name'],
+          valueField: 'reservation-step',
+          displayFields: ['name', 'reservation-step'],
+          multiple: true,
+          hint: 'dodajemy z listy rozwijanej kroki  które będą wchodzić w skład jak przebiega rezerwacja',
+        }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'reservation' }
+      - {
+          label: 'ID  rezerwacji',
+          name: 'reservation_id',
+          widget: 'string',
+          hint: 'niepowtarzalne ID np. rezerwacja dla kajaków ',
+        }
+      - { label: 'Nazwa', name: 'name', widget: 'string' }
+      - { label: 'Tytuł Sekcji', name: 'title_reservation', widget: 'string', hint: 'wpisujemy nagłówek sekcji' }
+
   - name: 'offer-details' # Used in routes, e.g., /admin/collections/blog
     label: 'Oferta szczegóły' # Used in the UI
     folder: 'content/offer-details' # The path to the folder where the documents are stored
@@ -307,17 +336,17 @@ collections:
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     identifier_field: name
     fields: # The fields for each document, usually in front matter
-      # - {
-      #     label: 'Jak przebiega Rezerwacja',
-      #     name: 'booking',
-      #     widget: 'relation',
-      #     collection: 'reservation',
-      #     searchFields: ['name'],
-      #     valueField: 'reservation_id',
-      #     displayFields: ['name', 'reservation_id'],
-      #     multiple: true,
-      #     hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
-      #   }
+      - {
+          label: 'Jak przebiega Rezerwacja',
+          name: 'booking',
+          widget: 'relation',
+          collection: 'reservation',
+          searchFields: ['name'],
+          valueField: 'reservation_id',
+          displayFields: ['name', 'reservation_id'],
+          multiple: true,
+          hint: 'dodajemy z listy rozwijanej stworzony sposób rezerwacji',
+        }
       - {
           label: 'Cennik',
           name: 'prices-list-relations',
