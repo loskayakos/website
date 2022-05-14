@@ -264,8 +264,8 @@ collections:
         }
       - { label: 'Gwiazdka', name: 'star', widget: 'string', required: false, hint: 'wpisujemy tekst do gwiazdki' }
 
-  - name: 'reservation' # Used in routes, e.g., /admin/collections/blog
-    label: 'Jak przebiega rezerwacja' # Used in the UI
+  - name: 'reservation-step' # Used in routes, e.g., /admin/collections/blog
+    label: 'Kroki rezerwacji' # Used in the UI
     folder: 'content/reservation' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
@@ -273,10 +273,10 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'reservation' }
       - {
-          label: 'ID rezerwacji',
+          label: 'ID kroku rezerwacji',
           name: 'reservation_id',
           widget: 'string',
-          hint: 'niepowtarzalne ID np. rezerwacja kajak ',
+          hint: 'niepowtarzalne ID np. rezerwacja kajak krok 1 ',
         }
       - { label: 'Nazwa', name: 'name', widget: 'string' }
       - { label: 'Numer Kroku', name: 'number_step', widget: 'string', valueType: 'int', min: 1, step: 1, default: 1 }
