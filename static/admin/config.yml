@@ -321,9 +321,9 @@ collections:
       #   }
       - {
           label: 'Cennik',
-          name: 'prices-list',
+          name: 'prices-list-relations',
           widget: 'relation',
-          collection: 'prices-list-relation',
+          collection: 'prices-list',
           searchFields: ['name'],
           valueField: 'prices_list_id',
           displayFields: ['name', 'prices_list_id'],
