@@ -312,7 +312,7 @@ collections:
           label: 'Kroki rezerwacji',
           name: 'reservation-steps',
           widget: 'relation',
-          collection: 'reservations-step',
+          collection: 'reservations-steps',
           searchFields: ['name'],
           valueField: 'reservation_step_id',
           displayFields: ['name', 'reservation_step_id'],
