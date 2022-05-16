@@ -310,7 +310,7 @@ collections:
     fields:
       - {
           label: 'Kroki rezerwacji',
-          name: 'reservation-steps',
+          name: 'reservation_steps',
           widget: 'relation',
           collection: 'reservation-steps',
           searchFields: ['name'],
