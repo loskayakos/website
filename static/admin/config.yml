@@ -17,6 +17,7 @@ collections:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about-us' }
       - { label: 'Tytuł', name: 'title', widget: 'string', hint: 'wpisujemy tytuł intro w kolorze niebieskim' }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'wpisujemy opis o nas' }
+
   - name: 'contact' # Used in routes, e.g., /admin/collections/blog
     label: 'Dane kontaktowe' # Used in the UI
     folder: 'content/contact' # The path to the folder where the documents are stored
@@ -29,6 +30,7 @@ collections:
       - { label: 'Telefon', name: 'phone', widget: 'string' }
       - { label: 'E-mail', name: 'email', widget: 'string' }
       - { label: 'Lokalizacja', name: 'location', widget: 'string' }
+
   - name: 'company' # Used in routes, e.g., /admin/collections/blog
     label: 'Dane firmowe' # Used in the UI
     folder: 'content/company' # The path to the folder where the documents are stored
@@ -41,6 +43,7 @@ collections:
       - { label: 'Nip', name: 'nip', widget: 'string' }
       - { label: 'Numer Banku', name: 'bank_number', widget: 'string' }
       - { label: 'Regon', name: 'regon', widget: 'string' }
+
   - name: 'media' # Used in routes, e.g., /admin/collections/blog
     label: 'Media' # Used in the UI
     folder: 'content/media' # The path to the folder where the documents are stored
@@ -61,6 +64,7 @@ collections:
           widget: 'string',
           hint: 'URL path : https://www.instagram.com/twojafirma',
         }
+
   - name: 'hero' # Used in routes, e.g., /admin/collections/blog
     label: 'Hero' # Used in the UI
     folder: 'content/hero' # The path to the folder where the documents are stored
@@ -72,6 +76,7 @@ collections:
       - { label: 'Intro', name: 'intro', widget: 'string' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
   - name: 'hero-slider' # Used in routes, e.g., /admin/collections/blog
     label: 'Slider Sekcja O nas ' # Used in the UI
     folder: 'content/hero-slider' # The path to the folder where the documents are stored
@@ -88,6 +93,7 @@ collections:
           hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w slider',
         }
       - { label: 'hero_slider_alt', name: 'hero_slider_alt', widget: 'string', hint: 'wpisujemy tytuł zdjęcia' }
+
   - name: 'offer' # Used in routes, e.g., /admin/collections/blog
     label: 'Oferta' # Used in the UI
     folder: 'content/offer' # The path to the folder where the documents are stored
@@ -98,6 +104,12 @@ collections:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer' }
       - { label: 'Główny nagłówek', name: 'title', widget: 'string', hint: 'wpisujemy tytuł sekcji' }
       - {
+          label: 'Adres URL',
+          name: 'slug',
+          widget: 'string',
+          hint: 'Wpisujemy adres pod jakim będzie się wyświetlać strona np. kajaki',
+        }
+      - {
           label: 'Zdjęcie',
           name: 'offer_picture',
           widget: 'image',
@@ -105,6 +117,7 @@ collections:
         }
       - { label: 'Nazwa zdjęcia', name: 'offer_picture_alt', widget: string, hint: 'wpisujemy tytuł zdjęcia' }
       - { label: 'Krótki Opis', name: 'short_description', widget: string, hint: 'krótki opis w kafelku pod zdjęciem' }
+
   - name: 'how-do-we-work' # Used in routes, e.g., /admin/collections/blog
     label: 'Jak działamy' # Used in the UI
     folder: 'content/how-do-we-work' # The path to the folder where the documents are stored
@@ -134,6 +147,7 @@ collections:
           default: 1,
           hint: 'dodajemy numer w jakiej kolejności dany krok ma się wyświetlić',
         }
+
   - name: 'AboutUs' # Used in routes, e.g., /admin/collections/blog
     label: 'O nas' # Used in the UI
     folder: 'content/aboutus' # The path to the folder where the documents are stored
@@ -148,6 +162,7 @@ collections:
       - { label: 'Tytuł grafiki 3', name: 'title_graphic_3', widget: 'string' }
       - { label: 'Tytuł grafiki 4', name: 'title_graphic_4', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'wpisujemy tekst o nas' }
+
   - name: 'offer-subpage' # Used in routes, e.g., /admin/collections/blog
     label: 'Podstrona Oferta' # Used in the UI
     folder: 'content/offer-subpage' # The path to the folder where the documents are stored
@@ -158,6 +173,7 @@ collections:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer-subpage' }
       - { label: 'Title', name: 'title', widget: 'string', hint: 'tutuł podstrony oferta' }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'krótki tekst pod tytułem' }
+
   - name: 'gallery-slider' # Used in routes, e.g., /admin/collections/blog
     label: 'Galeria-Slider' # Used in the UI
     folder: 'content/gallery-slider' # The path to the folder where the documents are stored
@@ -180,6 +196,7 @@ collections:
           default: 1,
           hint: 'numer zdjęcia w jakiej kolejności ma się wyświetlać',
         }
+
   - name: 'gallery-text' # Used in routes, e.g., /admin/collections/blog
     label: 'Podstrona Galeria' # Used in the UI
     folder: 'content/gallery-text' # The path to the folder where the documents are stored
@@ -190,6 +207,7 @@ collections:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'gallery-text' }
       - { label: 'Tytuł', name: 'title', widget: 'string', hint: 'tytuł podstrony galeria' }
       - { label: 'Tekst', name: 'body', widget: 'markdown', hint: 'krótki tekst po tytułem podstrony galeria' }
+
   - name: 'contact-text' # Used in routes, e.g., /admin/collections/blog
     label: 'Podstrona Kontakt' # Used in the UI
     folder: 'content/contact-text' # The path to the folder where the documents are stored
@@ -220,6 +238,7 @@ collections:
           widget: 'string',
           hint: 'wpisujemy nazwę ceny np. kajak(pn. - czw.)',
         }
+
   - name: 'prices-list' # Used in routes, e.g., /admin/collections/blog
     label: 'cennik' # Used in the UI
     folder: 'content/prices-list' # The path to the folder where the documents are stored
@@ -367,7 +386,7 @@ collections:
           label: 'Adres URL',
           name: 'slug',
           widget: 'string',
-          hint: 'Wpisujemy adres pod jakim będzie się wyświetlać strona np. kajaki',
+          hint: 'Wpisujemy adres pod jakim będzie się wyświetlać strona musi być identyczny jak w ofercie',
         }
       - { label: 'Tytuł Strony', name: 'title_offer_details', widget: 'string', hint: 'wpisujemy nagłówek strony' }
       - { label: 'Tekst', name: 'body', widget: 'markdown', hint: 'krótki tekst pod tytułem strony oferty' }
