@@ -3,11 +3,62 @@ import styled from 'styled-components'
 import variables from '../../styles/variables'
 
 const Svg = styled.svg`
-  transform: rotate(270deg);
+  transform: rotate(90deg);
+  margin: 0 auto;
+  width: 140px;
+  height: auto;
+  display: block;
+  ${({ isHeader }) =>
+    isHeader &&
+    `@media ${variables.device.tabletXL} {
+      width: 324px;
+    position: absolute;
+    top: -19px;
+    left: 366px;
+    }`};
+  ${({ isRiverTop }) => isRiverTop && ' transform: rotate(0deg);'};
+  ${({ isOfferTemplate }) =>
+    isOfferTemplate &&
+    ` position: absolute;
+    bottom: -84px;
+    right: 9px;
+    width: 108px;
+    height: 86px;
+  @media ${variables.device.tabletXL} {
+    bottom: -152px;
+    right: 9px;
+    width: 194px;
+    height: 154px;
+  }`}
+  ${({ isRiverRightCornerPage }) =>
+    isRiverRightCornerPage &&
+    `transform: rotate(105deg);
+    position: absolute;
+    top: -41px;
+    right: -29px;
+    @media ${variables.device.tabletXL} {
+    width: 177px;
+    top: 0;
+    right: 0;
+    }`};
+  ${({ isRiverLeftCornerPage }) =>
+    isRiverLeftCornerPage &&
+    'transform: rotate(0deg); position:absolute;top: -41px; left: -29px;@media ${variables.device.tabletXL} {width: 177px;top: 0;left: 0; '}
 `
-export function Boat() {
+export function Boat({ isHeader, isRiverTop, isRiverRightCornerPage, isRiverLeftCornerPage, isOfferTemplate }) {
   return (
-    <Svg width='197' height='157' viewBox='0 0 197 157' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <Svg
+      width='197'
+      height='157'
+      viewBox='0 0 197 157'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      isHeader={isHeader}
+      isRiverTop={isRiverTop}
+      isRiverRightCornerPage={isRiverRightCornerPage}
+      isRiverLeftCornerPage={isRiverLeftCornerPage}
+      isOfferTemplate={isOfferTemplate}
+    >
       <path
         d='M124 95C120.469 92.5525 116.186 91.8222 112.341 90.0365C107.485 87.7815 101.447 86.3314 97.4658 82.5187C93.8299 79.0371 91.1133 72.1993 90.9184 67.0768C90.5236 56.7025 89.0346 44.2158 81.3844 36.4831C75.293 30.3261 66.2739 28.317 58.1239 27.0496C52.8016 26.222 47.4759 25.1258 42.1 24.5824C36.2372 23.9898 30.2812 24.62 24.6402 22.4925C20.1448 20.797 16.5123 20.3624 12.5792 17.4129C9.87001 15.3812 7.06319 13.9512 5.37134 10.911C4.5657 9.46336 3.3623 8.44611 2.64325 6.99251C1.8618 5.41275 2.01149 3.70892 2.01149 2'
         stroke='#009DDC'
