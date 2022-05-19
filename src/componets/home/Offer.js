@@ -127,7 +127,7 @@ const Offer = ({ isOfferSubpage }) => {
           {edges.map(({ node }, id) => {
             const { frontmatter: page } = node
             const image = getImage(page.offer_picture)
-            console.log(page.slug)
+
             return (
               <OfferWrapper key={id}>
                 <Figure>

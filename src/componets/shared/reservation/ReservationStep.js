@@ -28,7 +28,7 @@ const NumberWork = styled.span`
 function ReservationStep({ order, title, description, image, alt, index }) {
   const { width } = useWindowSize()
   const breakpoint = 992
-  console.log(order, 'index')
+
   return (
     <>
       {width < breakpoint && typeof window !== 'undefined' ? (
