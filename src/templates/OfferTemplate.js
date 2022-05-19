@@ -51,7 +51,7 @@ export default function OfferTemplate({ data }) {
             </InternalLink>
           </Wrapper>
 
-          {width < breakpoint && (
+          {width < breakpoint && typeof window !== 'undefined' && (
             <Wrapper mobile='0 0 23px'>
               <PageTitle>{title_offer_details}</PageTitle>
             </Wrapper>
@@ -69,7 +69,7 @@ export default function OfferTemplate({ data }) {
           </Wrapper>
 
           <Wrapper paddingTablet='72px 0 0' mobile='89px 0 0' tabletMaxWidth='977px'>
-            {width >= breakpoint && <PageTitle>{title_offer_details}</PageTitle>}
+            {width >= breakpoint && typeof window !== 'undefined' && <PageTitle>{title_offer_details}</PageTitle>}
 
             <Content dangerouslySetInnerHTML={{ __html: html }} />
           </Wrapper>
