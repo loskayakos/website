@@ -14,7 +14,7 @@ import {
   Section,
 } from './../componets/shared/Index.styled'
 import ReservationSteps from '../componets/shared/reservation/ReservationSteps'
-import PricesList from '../componets/shared/prices/pricesList'
+import PricesList from '../componets/shared/prices/PricesList'
 import { routeLinks } from './../config/routing'
 import { useWindowSize } from '../componets/utils/use-windowsize'
 import { Boat } from '../componets/icons/Boat.icon'
