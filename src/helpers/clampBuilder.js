@@ -1,11 +1,6 @@
 import { basePx } from './../styles/variables'
 
-export function clampBuilder(
-  minWidthPx,
-  maxWidthPx,
-  minFontSizePx,
-  maxFontSizePx
-) {
+export function clampBuilder(minWidthPx, maxWidthPx, minFontSizePx, maxFontSizePx) {
   const pixelsPerRem = basePx
 
   const minWidth = minWidthPx / pixelsPerRem
@@ -15,6 +10,8 @@ export function clampBuilder(
 
   const slope = (maxFontSize - minFontSize) / (maxWidth - minWidth)
   const yAxisIntersection = -minWidth * slope + minFontSize
+  console.log(minWidthPx, 'minWidthPx')
+  console.log(basePx, 'basePx')
 
   return `clamp( ${minFontSize}rem, ${yAxisIntersection}rem + ${slope * 100}vw, ${maxFontSize}rem )`
 }
