@@ -2,6 +2,13 @@ import { createGlobalStyle } from 'styled-components'
 import '../../static/fonts/fonts.css'
 
 export const GlobalStyle = createGlobalStyle` 
+   *,
+     ::after,
+     ::before {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+     }
 :root {
     --black: #000000;
 }
@@ -9,9 +16,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Manrope', sans-serif;
     font-weight:400 ;
     color: var(--black);
-    & .flex {
-        display:flex ;
-    }
+  a{
+      text-decoration:none ;
+  }
    
 }
 `
