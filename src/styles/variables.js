@@ -1,12 +1,11 @@
- const basePx = 16
- const pxToRem = (px) => `${px / basePx}rem`
+export const basePx = 16
+const pxToRem = px => `${px / basePx}rem`
 
- const deviceSize = {
+const deviceSize = {
   tablet: 580,
   tabletXL: 991,
   laptop: 1280,
   desktop: 1540,
-  
 }
 
 export default {
@@ -17,7 +16,6 @@ export default {
     tabletXL: `${deviceSize.tabletXL}px`,
     laptop: `${deviceSize.laptop}px`,
     desktop: `${deviceSize.desktop}px`,
-    
   },
 
   device: {
@@ -28,12 +26,11 @@ export default {
   },
 
   color: {
-    primary: '#2764AB', 
+    primary: '#2764AB',
     text: '#000000',
     button: '#52782C',
     headerButton: '#52782C',
     black: '#000000',
-    heading: ' #101213'
-    
+    heading: ' #101213',
   },
 }
