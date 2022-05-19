@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Section } from '../componets/shared/Index.styled'
-import Media from '../componets/shared/media'
+import Media from '../componets/shared/Media'
 import Company from '../componets/shared/Company'
 import Contact from '../componets/shared/Contact'
 
