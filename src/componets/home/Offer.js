@@ -129,25 +129,27 @@ const Offer = ({ isOfferSubpage }) => {
             const image = getImage(page.offer_picture)
 
             return (
-              <OfferWrapper key={id}>
-                <Figure>
-                  <GatsbyImage image={image} alt={page.offer_picture_alt} className='offer-img' />
-                </Figure>
-                <Flex direction='column'>
-                  <Wrapper mobile='8px 0 0 '>
-                    <SubSectionTitle>{page.title}</SubSectionTitle>
-                  </Wrapper>
-                  <Wrapper mobile='4px 0 0'>
-                    <OfferDescription>{page.short_description}</OfferDescription>
-                  </Wrapper>
-                </Flex>
-                <Wrapper mobile='9.5px 0 0'>
-                  <Flex items='center' content='flex-end'>
-                    <Button name='Zobacz więcej' isNoColor={true} />
-                    <SliderArrow isRight={true} />
+              <InternalLink to={routeLinks.offer(page.slug)}>
+                <OfferWrapper key={id}>
+                  <Figure>
+                    <GatsbyImage image={image} alt={page.offer_picture_alt} className='offer-img' />
+                  </Figure>
+                  <Flex direction='column'>
+                    <Wrapper mobile='8px 0 0 '>
+                      <SubSectionTitle>{page.title}</SubSectionTitle>
+                    </Wrapper>
+                    <Wrapper mobile='4px 0 0'>
+                      <OfferDescription>{page.short_description}</OfferDescription>
+                    </Wrapper>
                   </Flex>
-                </Wrapper>
-              </OfferWrapper>
+                  <Wrapper mobile='9.5px 0 0'>
+                    <Flex items='center' content='flex-end'>
+                      <Button name='Zobacz więcej' isNoColor={true} />
+                      <SliderArrow isRight={true} />
+                    </Flex>
+                  </Wrapper>
+                </OfferWrapper>
+              </InternalLink>
             )
           })}
           {isOfferSubpage ? <Boat isRiverTop={true} /> : <Sun />}
