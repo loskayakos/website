@@ -1,13 +1,10 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import { Flex, Section, SectionTitle, SubSectionTitle, TextRegular, Wrapper, Figure } from '../Index.styled'
+import { Section, SectionTitle, Wrapper } from '../Index.styled'
 import { Boat } from '../../icons/Boat.icon'
 import { NounArrow } from '../../icons/NounArrow.icon'
 import { Bird } from '../../icons/Bird.icon'
-import { useWindowSize } from '../../utils/use-windowsize'
-import variables from '../../../styles/variables'
-import Page from '../../../layout/Page'
 import ReservationStep from './ReservationStep'
 
 const SectionWork = styled(Section)`
@@ -52,7 +49,7 @@ const ReservationSteps = ({ steps }) => {
                 />
                 {index % 2 && index < step.length - 1 ? (
                   <NounArrow isArrowDownLeft={true} />
-                ) : index == step.length - 1 ? (
+                ) : index === step.length - 1 ? (
                   ''
                 ) : (
                   <NounArrow isArrowDownRight={true} />

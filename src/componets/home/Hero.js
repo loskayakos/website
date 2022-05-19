@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Wrapper, Section } from '../shared/Index.styled'
+import { Flex, Section } from '../shared/Index.styled'
 import HeroSlider from './HeroSlider'
 import HeroText from './HeroText'
 

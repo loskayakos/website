@@ -1,7 +1,6 @@
 import React from 'react'
 import CarouselCard from '../shared/swiper/CarouselCard'
-import { Flex, Wrapper } from '../shared/Index.styled'
-import { Section } from './../shared/Index.styled'
+import { Flex } from '../shared/Index.styled'
 
 const GallerySlider = ({ sliders, className, isOnlyImage }) => {
   const { allMarkdownRemark } = sliders

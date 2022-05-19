@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Page from '../layout/Page'
 import { Arrow } from '../componets/icons/Arrow.icon'
@@ -26,7 +26,6 @@ export default function OfferTemplate({ data }) {
     title_offer_details,
     offer_details_picture_left_alt,
     offer_details_picture_right_alt,
-    slug,
     prices_list_relations,
     booking,
     offer_details_picture_left,

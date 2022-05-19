@@ -1,9 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Content, PageTitle, Wrapper, Flex } from '../shared/Index.styled'
-
-import styled from 'styled-components'
-import variables from '../../styles/variables'
 import { Button } from '../shared/Button'
 import { NounArrow } from './../icons/NounArrow.icon'
 import Camera from './../icons/Camera.icon'
