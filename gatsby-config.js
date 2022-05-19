@@ -3,7 +3,7 @@ module.exports = {
     title: `Los Kayakos`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  flags: { PRESERVE_WEBPACK_CACHE: true },
+  flags: { PRESERVE_WEBPACK_CACHE: true, FAST_DEV: true },
   plugins: [
     {
       resolve: `gatsby-plugin-netlify-cms`,
@@ -49,19 +49,25 @@ module.exports = {
         path: `${__dirname}/static/fonts/`,
       },
     },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'markdown',
-    //     path: `${__dirname}/content/`,
-    //   },
-    // },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'images',
-    //     path: `${__dirname}/static/images`,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'markdown',
+        path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/static/images`,
+      },
+    },
   ],
+  mapping: {
+    'MarkdownRemark.frontmatter.prices_list_relations': `MarkdownRemark.frontmatter.prices_list_id`,
+    'MarkdownRemark.frontmatter.prices': `MarkdownRemark.frontmatter.price_id`,
+    'MarkdownRemark.frontmatter.reservation_steps': `MarkdownRemark.frontmatter.reservation_step_id`,
+    'MarkdownRemark.frontmatter.booking': `MarkdownRemark.frontmatter.reservation_id`,
+  },
 }
