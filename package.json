@@ -25,15 +25,17 @@
     "gatsby-plugin-sitemap": "^5.11.1",
     "gatsby-plugin-styled-components": "^5.11.0",
     "gatsby-source-filesystem": "^4.11.1",
-    "gatsby-transformer-remark": "^5.11.1",
+    "gatsby-transformer-remark": "^5.12.1",
     "gatsby-transformer-sharp": "^4.11.0",
     "netlify-cms-app": "^2.15.70",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "swiper": "^8.1.4"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.25",
     "gatsby-plugin-netlify": "^4.3.0"
   }
 }
