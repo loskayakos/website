@@ -65,7 +65,7 @@ const Contact = ({ isTextBlack, isContact }) => {
                 <OutsideLink href='tel:{page.phone}'>{page.phone}</OutsideLink>
               </TextRegular>
               <TextRegular color={isTextBlack ? '#000000' : '#ffffff'}>
-                e-mail: <OutsideLink href='mailto:`${page.email}`'>{page.email}</OutsideLink>
+                e-mail: <OutsideLink href={`mailto:${page.email}`}>{page.email}</OutsideLink>
               </TextRegular>
 
               <TextRegular color={isTextBlack ? '#000000' : '#ffffff'}>
