@@ -21,6 +21,10 @@ const OfferSection = styled(Section)`
     & .swiper-slide {
       padding-bottom: 20px;
     }
+    & .offer-prev,
+    .offer-next {
+      cursor: pointer;
+    }
   }
 `
 
