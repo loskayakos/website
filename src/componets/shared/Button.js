@@ -12,9 +12,21 @@ const SharedButton = styled.button`
   line-height: 150%;
   background: #52782c;
   border-radius: 24px;
-  border: none;
+  border: 2px solid transparent;
   color: #f8f9fa;
-  ${({ color }) => color && `background: #ffffff; color: #52782C; border: 2px solid #52782C;  `};
+  transition: transform 0.5s cubic-bezier(0.345, 0.24, 0.07, 1);
+  cursor: pointer;
+
+  &:hover {
+    background: #ffffff;
+    color: #52782c;
+    border: 2px solid #52782c;
+  }
+  ${({ color }) =>
+    color &&
+    `background: #ffffff; color: #52782C; border: 2px solid #52782C;&:hover {
+      color: #f8f9fa;border: 2px solid transparent;background: #52782c;
+  }  `};
   ${({ isNoColor }) =>
     isNoColor &&
     `background: #ffffff;
