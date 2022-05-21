@@ -53,10 +53,11 @@ const OfferWrapper = styled.div`
   border-radius: 16px;
   max-width: 383px;
   box-shadow: rgb(0 0 0 / 16%) 0px 0px 0px;
-  transition: box-shadow 0.1s ease-in 0s, transform 0.1s ease-in 0s;
+  transition: box-shadow 0.1s ease-in 0s, transform 0.5s ease-in 0s;
 
   @media ${variables.device.tabletXL} {
     padding: 28.5px 0;
+    transition: transform 0.5s cubic-bezier(0.345, 0.24, 0.07, 1);
     &:hover {
       background: #ffffff;
       /* Shadow */
@@ -169,8 +170,8 @@ const Offer = ({ isOfferSubpage }) => {
               },
             }}
             navigation={{
-              prevEl: '.prev',
-              nextEl: '.next',
+              prevEl: '.offer-prev',
+              nextEl: '.offer-next',
               clickable: true,
             }}
             modules={[Navigation]}
@@ -211,14 +212,14 @@ const Offer = ({ isOfferSubpage }) => {
           <Flex tabletDirection='row-reverse' tabletContent='space-between'>
             <Wrapper mobile='27px 62px 0 62px'>
               <Flex content='flex-end' gap='54'>
-                <div className='prev'>
+                <div className='offer-prev'>
                   <Flex>
                     <span>
                       <SliderArrow />
                     </span>
                   </Flex>
                 </div>
-                <div className='next'>
+                <div className='offer-next'>
                   <Flex>
                     <span>
                       <SliderArrow isRight={true} />
