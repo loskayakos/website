@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Flex, Section, SectionTitle, TextRegular, OutsideLink, Wrapper } from '../../componets/shared/Index.styled'
+import { Flex, SectionTitle, TextRegular, OutsideLink, Wrapper } from '../../componets/shared/Index.styled'
 import Locations from '../../componets/icons/Locations.icon'
 import styled from 'styled-components'
 import variables from '../../styles/variables'
@@ -48,12 +48,12 @@ const Contact = ({ isTextBlack, isContact }) => {
             <ContactTextRegular color={isTextBlack ? '#000000' : '#ffffff'}>
               {' '}
               <span>Telefon</span>
-              <OutsideLink href='tel:{page.phone}'>{page.phone}</OutsideLink>
+              <OutsideLink href={`tel:${page.phone}`}>{page.phone}</OutsideLink>
             </ContactTextRegular>
             <ContactTextRegular color={isTextBlack ? '#000000' : '#ffffff'}>
               {' '}
               <span> E-mail</span>
-              <OutsideLink href='mailto:`${page.email}`'>{page.email}</OutsideLink>
+              <OutsideLink href={`mailto:${page.email}`}>{page.email}</OutsideLink>
             </ContactTextRegular>
           </Flex>
         ) : (
