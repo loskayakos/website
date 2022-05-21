@@ -16,6 +16,7 @@ const SharedButton = styled.button`
   color: #f8f9fa;
   transition: transform 0.5s cubic-bezier(0.345, 0.24, 0.07, 1);
   cursor: pointer;
+  z-index: 1;
 
   &:hover {
     background: #ffffff;
