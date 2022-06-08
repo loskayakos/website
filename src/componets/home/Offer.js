@@ -57,9 +57,8 @@ const OfferWrapper = styled.div`
   max-width: 383px;
   box-shadow: rgb(0 0 0 / 16%) 0px 0px 0px;
   transition: scale(1);
-  will-change: transform, box-shadow;
-  transition: transform 1.2s cubic-bezier(0.08, 0.635, 0.25, 0.995),
-    box-shadow 0.7s cubic-bezier(0.08, 0.635, 0.25, 0.995);
+  will-change: padding, box-shadow;
+  padding: 1.2s cubic-bezier(0.08, 0.635, 0.25, 0.995), box-shadow 0.7s cubic-bezier(0.08, 0.635, 0.25, 0.995);
 
   @media ${variables.device.tabletXL} {
     padding: 28.5px 0;
@@ -76,8 +75,7 @@ const OfferWrapper = styled.div`
         0px 9.39116px 10.0172px rgba(21, 44, 91, 0.015), 0px 4.98758px 5.32008px rgba(21, 44, 91, 0.0121168),
         0px 2.07544px 2.21381px rgba(21, 44, 91, 0.00843437);
       border-radius: 16px;
-      /* padding: 28.5px 46.5px; */
-      transition: scale(0.8);
+      padding: 28.5px 46.5px;
     }
   }
   @media ${variables.device.laptop} {
@@ -109,7 +107,7 @@ const Offer = ({ isOfferSubpage }) => {
             frontmatter {
               offer_picture {
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR)
+                  gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR, height: 244)
                 }
               }
               short_description
