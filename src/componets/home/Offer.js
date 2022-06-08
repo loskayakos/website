@@ -46,6 +46,7 @@ const Figure = styled.figure`
   & .offer-img {
     border-radius: 16px;
     width: 100%;
+    max-height: 244px;
     & img {
       border-radius: 16px;
     }
@@ -81,6 +82,7 @@ const OfferWrapper = styled.div`
   @media ${variables.device.laptop} {
     width: 100%;
     height: 420px;
+    overflow-y: hidden;
   }
 `
 const ArrowDescription = styled.span`
@@ -107,7 +109,7 @@ const Offer = ({ isOfferSubpage }) => {
             frontmatter {
               offer_picture {
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR, height: 244)
+                  gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR)
                 }
               }
               short_description
