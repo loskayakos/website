@@ -1,10 +1,20 @@
 import React from 'react'
 import Page from '../layout/Page'
+import styled from 'styled-components'
+import { Section } from '../componets/shared/Index.styled'
+import variables from '../styles/variables'
 
+const BookeroSection = styled(Section)`
+  &&.bookero-plugin-header {
+    background: ${variables.color.headerButton};
+  }
+`
 export default function Rezervation() {
   return (
     <Page>
-      <div id='bookero'></div>
+      <BookeroSection>
+        <div id='bookero'></div>
+      </BookeroSection>
     </Page>
   )
 }
