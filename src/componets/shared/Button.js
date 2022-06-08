@@ -43,12 +43,18 @@ const SharedButton = styled.button`
   ${({ isOffer }) => isOffer && `display: block; margin: 0 auto;`}
 `
 
-export const Button = ({ link, name, color, isNoColor, isOffer }) => {
+export const Button = ({ link, name, color, isNoColor, isOffer, onClick }) => {
   return (
-    <SharedButton color={color} isNoColor={isNoColor} isOffer={isOffer}>
-      <Link className='btn' to={link}>
-        {name}
-      </Link>
+    <SharedButton color={color} isNoColor={isNoColor} isOffer={isOffer} onClick={onClick}>
+      {/* <Link
+        className='btn'
+        to={'modal-example'}
+        state={{
+          modal: true,
+        }}
+      > */}
+      {name}
+      {/* </Link> */}
     </SharedButton>
   )
 }
