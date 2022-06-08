@@ -10,7 +10,7 @@ const BookeroSection = styled(Section)`
   }
   && .submit-section .submit-button[data-v-78854db5] {
     background: ${variables.color.headerButton};
-    width: 100%;
+    width: max-content;
     height: 51px;
     font-family: Manrope;
     font-style: normal;
@@ -28,8 +28,26 @@ const BookeroSection = styled(Section)`
   .submit-section .submit-button[data-v-78854db5] {
     &:hover {
       background: rgb(255, 255, 255);
-      color: rgb(82, 120, 44);
-      border: 2px solid rgb(82, 120, 44);
+      color: ${variables.color.headerButton};
+      border: 2px solid ${variables.color.headerButton};
+      &::after {
+        border: 2px solid ${variables.color.headerButton};
+        border-left: none;
+        border-bottom: none;
+      }
+    }
+  }
+  && .inquiry-actions-details {
+    color: ${variables.color.headerButton};
+    &::after {
+      border-top: 2px solid ${variables.color.headerButton};
+      border-right: 2px solid ${variables.color.headerButton};
+    }
+  }
+  && .people-number-wrapper .people-number-minus[data-v-ae96d084],
+  .people-section .people-number-wrapper .people-number-plus[data-v-ae96d084] {
+    &:hover {
+      color: ${variables.color.headerButton};
     }
   }
 `
