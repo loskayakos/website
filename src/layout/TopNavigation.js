@@ -9,6 +9,7 @@ import { Button } from './../componets/shared/Button'
 import styled from 'styled-components'
 import variables from '../styles/variables'
 import { useWindowSize } from './../componets/utils/use-windowsize'
+import CustomModal from '../componets/shared/Modal'
 
 const Nav = styled.nav`
   background: #f8f9fa;
@@ -57,7 +58,8 @@ const TopNavigation = ({ path, toggled }) => {
           <Logo />
 
           <List opened={menuOpened} elements={TopMenu} currentPath={path || ''} />
-          {width > breakpoint && <Button name='Rezerwuj' />}
+
+          {width > breakpoint && <CustomModal />}
           <Burger opened={menuOpened} toggle={toggleMenu} />
         </Flex>
       </Section>
