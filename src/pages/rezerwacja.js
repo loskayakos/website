@@ -5,7 +5,10 @@ import { Section } from '../componets/shared/Index.styled'
 import variables from '../styles/variables'
 
 const BookeroSection = styled(Section)`
-  &&.bookero-plugin-header {
+  && .bookero-plugin-header {
+    background: ${variables.color.headerButton};
+  }
+  && .submit-button {
     background: ${variables.color.headerButton};
   }
 `
