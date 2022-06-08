@@ -3,8 +3,8 @@ import SwiperCarousel from '../shared/SwiperCarousel'
 import { useStaticQuery, graphql } from 'gatsby'
 import GalleryText from './GalleryText'
 import { Flex, PageSection } from '../shared/Index.styled'
-import GallerySlider from './GallerySlider'
 import { Section } from './../shared/Index.styled'
+import GalleryMobile from './GalleryMobile'
 
 const Gallery = () => {
   return (
@@ -23,7 +23,7 @@ const Gallery = () => {
           </Flex>
         </Section>
         <Section tabletPadding='0 0 94px' mobile='0 0 49px'>
-          <GallerySlider sliders={useStaticQuery(GSQ)} isOnlyImage={true} className='gallery-img' />
+          <GalleryMobile />
         </Section>
       </PageSection>
     </>

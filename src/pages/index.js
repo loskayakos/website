@@ -9,7 +9,6 @@ const IndexPage = () => {
   return (
     <Page>
       <Hero />
-      <div id='bookero'></div>
       <Offer />
       <AboutUs />
       <HowWeDoWork />

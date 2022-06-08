@@ -51,17 +51,22 @@ const Figure = styled.figure`
     }
   }
 `
-
 const OfferWrapper = styled.div`
   padding-bottom: 50px;
   border-radius: 16px;
   max-width: 383px;
   box-shadow: rgb(0 0 0 / 16%) 0px 0px 0px;
-  transition: box-shadow 0.1s ease-in 0s, transform 0.5s ease-in 0s;
+  transition: scale(1);
+  will-change: transform, box-shadow;
+  transition: transform 1.2s cubic-bezier(0.08, 0.635, 0.25, 0.995),
+    box-shadow 0.7s cubic-bezier(0.08, 0.635, 0.25, 0.995);
 
   @media ${variables.device.tabletXL} {
     padding: 28.5px 0;
-    transition: transform 0.5s cubic-bezier(0.345, 0.24, 0.07, 1);
+    /* will-change: transform, box-shadow;
+    transition: transform 1.2s cubic-bezier(0.08, 0.635, 0.25, 0.995),
+      box-shadow 0.7s cubic-bezier(0.08, 0.635, 0.25, 0.995); */
+
     &:hover {
       background: #ffffff;
       /* Shadow */
@@ -71,7 +76,8 @@ const OfferWrapper = styled.div`
         0px 9.39116px 10.0172px rgba(21, 44, 91, 0.015), 0px 4.98758px 5.32008px rgba(21, 44, 91, 0.0121168),
         0px 2.07544px 2.21381px rgba(21, 44, 91, 0.00843437);
       border-radius: 16px;
-      padding: 28.5px 46.5px;
+      /* padding: 28.5px 46.5px; */
+      transition: scale(0.8);
     }
   }
   @media ${variables.device.laptop} {
@@ -192,20 +198,22 @@ const Offer = ({ isOfferSubpage }) => {
                         <GatsbyImage image={image} alt={page.offer_picture_alt} className='offer-img' />
                       </Figure>
                       <Flex direction='column'>
-                        <Wrapper mobile='8px 0 0 '>
-                          <SubSectionTitle>{page.title}</SubSectionTitle>
-                        </Wrapper>
-                        <Wrapper mobile='4px 0 0'>
-                          <OfferDescription>{page.short_description}</OfferDescription>
-                        </Wrapper>
-                        {isOfferSubpage && (
-                          <Wrapper paddingTablet='16px 0 0'>
-                            <Flex tabletItems='center' tabletGap='6' tabletContent='flex-end'>
-                              <ArrowDescription>Szczegóły</ArrowDescription>
-                              <ArrowOffer />
-                            </Flex>
+                        <Wrapper mobile='12px'>
+                          <Wrapper mobile='8px 0 0 '>
+                            <SubSectionTitle>{page.title}</SubSectionTitle>
                           </Wrapper>
-                        )}
+                          <Wrapper mobile='4px 0 0'>
+                            <OfferDescription>{page.short_description}</OfferDescription>
+                          </Wrapper>
+                          {isOfferSubpage && (
+                            <Wrapper paddingTablet='16px 0 0'>
+                              <Flex tabletItems='center' tabletGap='6' tabletContent='flex-end'>
+                                <ArrowDescription>Szczegóły</ArrowDescription>
+                                <ArrowOffer />
+                              </Flex>
+                            </Wrapper>
+                          )}
+                        </Wrapper>
                       </Flex>
                     </OfferWrapper>
                   </InternalLink>
