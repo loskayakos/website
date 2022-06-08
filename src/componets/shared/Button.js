@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { InternalLink } from './Index.styled'
+import { InternalHref } from './Index.styled'
 
 const SharedButton = styled.button`
   width: 194px;
@@ -47,9 +47,9 @@ const SharedButton = styled.button`
 export const Button = ({ color, isNoColor, isOffer }) => {
   return (
     <SharedButton color={color} isNoColor={isNoColor} isOffer={isOffer}>
-      <InternalLink className='btn' to={'/rezerwacja'} isButton={true}>
+      <InternalHref className='btn' href={'/rezerwacja'} isButton={true}>
         Rezerwuj
-      </InternalLink>
+      </InternalHref>
     </SharedButton>
   )
 }
