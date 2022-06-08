@@ -38,7 +38,7 @@ const HeroSlider = () => {
             frontmatter {
               hero_slider {
                 childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+                  gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG, height: 430)
                 }
               }
               hero_slider_alt
