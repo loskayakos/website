@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { InternalLink } from './Index.styled'
 
 const SharedButton = styled.button`
   width: 194px;
@@ -43,18 +44,12 @@ const SharedButton = styled.button`
   ${({ isOffer }) => isOffer && `display: block; margin: 0 auto;`}
 `
 
-export const Button = ({ link, name, color, isNoColor, isOffer, onClick }) => {
+export const Button = ({ color, isNoColor, isOffer }) => {
   return (
-    <SharedButton color={color} isNoColor={isNoColor} isOffer={isOffer} onClick={onClick}>
-      {/* <Link
-        className='btn'
-        to={'modal-example'}
-        state={{
-          modal: true,
-        }}
-      > */}
-      {name}
-      {/* </Link> */}
+    <SharedButton color={color} isNoColor={isNoColor} isOffer={isOffer}>
+      <InternalLink className='btn' to={'/rezerwacja'} isButton={true}>
+        Rezerwuj
+      </InternalLink>
     </SharedButton>
   )
 }

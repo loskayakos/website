@@ -50,6 +50,13 @@ const BookeroSection = styled(Section)`
       color: ${variables.color.headerButton};
     }
   }
+  && .submit-section .back-button[data-v-78854db5]:active,
+  .submit-section .back-button[data-v-78854db5]:focus,
+  .submit-section .back-button[data-v-78854db5] {
+    &:hover {
+      color: ${variables.color.headerButton};
+    }
+  }
 `
 export default function Rezervation() {
   return (

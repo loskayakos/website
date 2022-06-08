@@ -151,9 +151,10 @@ export const Figure = styled.figure`
 `
 export const InternalLink = styled(Link)`
   color: #000000;
-  ${({ isOfferTemplate }) => isOfferTemplate && 'color:#2764AB; text-transform: uppercase; '}
+  ${({ isOfferTemplate }) => isOfferTemplate && 'color:#2764AB; text-transform: uppercase; '};
   ${({ isCurrent }) =>
     isCurrent &&
     `color:  #52782C;
-          font-weight: 600;`}
+          font-weight: 600;`};
+  ${({ isButton }) => isButton && `color: inherit; padding: 12px 56.5px; font-weight: 700;`}
 `
