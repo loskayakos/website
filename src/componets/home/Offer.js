@@ -58,8 +58,8 @@ const OfferWrapper = styled.div`
   max-width: 383px;
   box-shadow: rgb(0 0 0 / 16%) 0px 0px 0px;
   transition: scale(1);
-  will-change: padding, box-shadow;
-  padding: 1.2s cubic-bezier(0.08, 0.635, 0.25, 0.995), box-shadow 0.7s cubic-bezier(0.08, 0.635, 0.25, 0.995);
+  will-change: box-shadow;
+  box-shadow: 0.7s cubic-bezier(0.08, 0.635, 0.25, 0.995);
 
   @media ${variables.device.tabletXL} {
     padding: 28.5px 0;
