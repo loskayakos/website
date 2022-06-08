@@ -8,7 +8,7 @@ const BookeroSection = styled(Section)`
   && .bookero-plugin-header {
     background: ${variables.color.headerButton};
   }
-  && .submit-button {
+  && .submit-section .submit-button[data-v-78854db5] {
     background: ${variables.color.headerButton};
   }
 `
