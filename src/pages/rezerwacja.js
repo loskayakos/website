@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Page from '../layout/Page'
 import styled from 'styled-components'
 import { Section } from '../componets/shared/Index.styled'
@@ -58,11 +58,26 @@ const BookeroSection = styled(Section)`
     }
   }
 `
+const bookeroWidgetHeight = 100
+const BookeroWidget = styled.div`
+  iframe {
+    height: ${bookeroWidgetHeight}%;
+  }
+`
 export default function Rezervation() {
+  useEffect(() => {
+    const bookero = window.BOOKERO
+    if (bookero) {
+      bookero.Init()
+    }
+  }, [])
   return (
     <Page>
       <BookeroSection>
-        <div id='bookero'></div>
+        <BookeroWidget
+          id='zgInGhVZL3Mw'
+          data-url='https://cdn.bookero.pl/plugin/v2/js/bookero-compiled.js'
+        ></BookeroWidget>
       </BookeroSection>
     </Page>
   )
