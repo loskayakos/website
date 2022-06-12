@@ -74,10 +74,7 @@ export default function Rezervation() {
   return (
     <Page>
       <BookeroSection>
-        <BookeroWidget
-          id='zgInGhVZL3Mw'
-          data-url='https://cdn.bookero.pl/plugin/v2/js/bookero-compiled.js'
-        ></BookeroWidget>
+        <BookeroWidget id='bookero' data-url='https://cdn.bookero.pl/plugin/v2/js/bookero-compiled.js'></BookeroWidget>
       </BookeroSection>
     </Page>
   )
