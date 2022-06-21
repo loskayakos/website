@@ -414,3 +414,58 @@ collections:
           widget: string,
           hint: 'wpisujemy tytuł zdjęcia',
         }
+
+  - name: 'downflow-text' # Used in routes, e.g., /admin/collections/blog
+    label: 'Podstrona Trasy Spływów' # Used in the UI
+    folder: 'content/downflow-text' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'downflow-text' }
+      - { label: 'Tytuł', name: 'title', widget: 'string', hint: 'tytuł podstrony trasy spływów' }
+      - { label: 'Tekst', name: 'body', widget: 'markdown', hint: 'krótki tekst po tytułem podstrony trasy spływów' }
+
+  - name: 'downflow-routes' # Used in routes, e.g., /admin/collections/blog
+    label: 'Trasy Spływów' # Used in the UI
+    folder: 'content/downflow-routes' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: name
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'downflow-routes' }
+      - { label: 'Tytuł', name: 'title', widget: 'string', hint: 'nazwa trasy' }
+      - {
+          label: 'Opis Długość trasy',
+          name: 'description_length_route',
+          widget: 'string',
+          hint: 'wpisujemy opis np. Długość trasy',
+        }
+      - { label: ' Długość trasy', name: 'length_route', widget: 'string', hint: 'wpisujemy długość np. 15 km' }
+      - {
+          label: 'Opis Czas spływu',
+          name: 'description_trip_time',
+          widget: 'string',
+          hint: 'wpisujemy np. czas spływu',
+        }
+      - { label: 'Czas spływu', name: 'trip_time', widget: 'string', hint: 'wpisujemy czas spływu np. około 5 godzin' }
+      - {
+          label: 'Opis stopień trudności',
+          name: 'description_difficulty_level',
+          widget: 'string',
+          hint: 'wpisujemy np. Stopień trudności trasy',
+        }
+      - {
+          label: 'Stopień trudności',
+          name: 'difficulty_level',
+          widget: 'string',
+          hint: 'wpisujemy stopień trudności np. bardzo łatwa',
+        }
+      - {
+          label: 'Opis polecana',
+          name: 'description_recommended',
+          widget: 'string',
+          hint: 'wpisujemy np. polecena dla rodzin z dziecmi ',
+        }
+      - { label: ' Polecana', name: 'recommended', widget: 'string', hint: 'wpisujemy tak lub nie' }
+      - { label: 'Tekst', name: 'body', widget: 'markdown', hint: 'krótki tekst po tytułem podstrony trasy spływów' }
