@@ -16,6 +16,9 @@ const LogoWrapper = styled(Wrapper)`
     }
   }
   @media ${variables.device.tabletXL} {
+    width: 200px;
+    display: flex;
+    align-items: center;
     & .logo-img {
       width: 100%;
       height: auto;

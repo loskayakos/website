@@ -58,23 +58,25 @@ const BookeroSection = styled(Section)`
     }
   }
 `
-const bookeroWidgetHeight = 100
+const bookeroWidgetHeight = 600
 const BookeroWidget = styled.div`
   iframe {
-    height: ${bookeroWidgetHeight}%;
+    height: ${bookeroWidgetHeight}px;
   }
 `
 export default function Rezervation() {
-  useEffect(() => {
-    const bookero = window.BOOKERO
-    if (bookero) {
-      bookero.Init()
-    }
-  }, [])
+  // useEffect(() => {
+  //   const bookero = window.BOOKERO
+  //   if (bookero) {
+  //     bookero.Init()
+  //   }
+  // }, [])
   return (
     <Page>
       <BookeroSection>
-        <BookeroWidget id='bookero' data-url='https://cdn.bookero.pl/plugin/v2/js/bookero-compiled.js'></BookeroWidget>
+        {/* <div id='bookero'></div> */}
+        {/* <BookeroWidget id='bookero' data-url='https://cdn.bookero.pl/plugin/v2/js/bookero-compiled.js'></BookeroWidget> */}
+        <iframe src='https://coders98.pro-linuxpl.com/' frameborder='0' width='100%' height='1000px'></iframe>
       </BookeroSection>
     </Page>
   )
