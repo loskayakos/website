@@ -79,6 +79,7 @@ export const SubSectionTitle = styled.h3`
   }
 `
 export const Flex = styled.div`
+  height: ${({ height }) => (height ? `${height}` : 'auto')};
   display: flex;
   gap: ${({ gap }) => (gap ? `${gap}px` : '')};
   flex-direction: ${({ direction }) => direction};
