@@ -8,6 +8,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Button } from '../componets/shared/Button'
 import { Sun } from './../componets/icons/Sun.icon'
 import { Bird } from './../componets/icons/Bird.icon'
+import variables from '../styles/variables'
 
 const RouteWrapper = styled.div`
   box-shadow: -34px 105px 44px rgba(162, 160, 160, 0.01), -19px 59px 37px rgba(162, 160, 160, 0.05),
