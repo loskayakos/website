@@ -14,7 +14,10 @@ const RouteWrapper = styled.div`
     -8px 26px 28px rgba(162, 160, 160, 0.09), -2px 7px 15px rgba(162, 160, 160, 0.1),
     0px 0px 0px rgba(162, 160, 160, 0.1);
   border-radius: 16px;
-  padding: 60px 48px;
+  padding: 30px 24px;
+  @media ${variables.device.tabletXL} {
+    padding: 60px 48px;
+  }
 `
 const BoldText = styled.span`
   font-weight: 700;
