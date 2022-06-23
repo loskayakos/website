@@ -9,6 +9,6 @@ description_difficulty_level: "Stopień trudności trasy:"
 difficulty_level: Bardzo łatwa
 description_recommended: "Polecana dla rodzin z dziećmi:"
 recommended: tak
-map: https://www.google.com/maps/d/edit?mid=1-5HqoLXcejb-KelrjzVazMgs9LL95xbF&usp=sharing
+map: https://www.google.com/maps/d/u/0/embed?mid=1-5HqoLXcejb-KelrjzVazMgs9LL95xbF&ehbc=2E312F
 ---
 Opis trasy
