@@ -5,7 +5,11 @@ import { Section } from './../shared/Index.styled'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import styled from 'styled-components'
 
-const GalleryWrapper = styled(Wrapper)``
+const GalleryWrapper = styled(Wrapper)`
+  &&.gatsby-image-wrapper-constrained {
+    border-radius: 12px;
+  }
+`
 
 const GalleryMobile = () => {
   const lightboxOptions = {
@@ -18,8 +22,6 @@ const GalleryMobile = () => {
   }
 
   const data = useStaticQuery(GSQ)
-  console.log('XXXXXXXXXXXXXXX')
-  console.log(data)
   // const images = []
   const images = data.allMarkdownRemark.edges.map(({ node }, index) => ({
     ...node.frontmatter.hero_slider.childImageSharp,

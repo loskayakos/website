@@ -60,9 +60,6 @@ export default function RaftingRoutes() {
       <DownflowText />
       <Section tabletPadding='97px 160px 80px' mobile='60px 20px'>
         {edges.map((route, index) => {
-          console.log('frontmatter')
-          console.log(route)
-
           const {
             title,
             description_length_route,
@@ -82,7 +79,7 @@ export default function RaftingRoutes() {
               {index == 2 && <Bird isOffer={true} />}
               <RouteWrapper>
                 <Flex direction='column' tabletDirection='row'>
-                  <Wrapper widthTablet='100%'>
+                  <Wrapper widthTablet='50%'>
                     <iframe src={map} width='100%' height='480'></iframe>
                   </Wrapper>
                   <Wrapper paddingTablet='0px 0px 0px 48px' mobile='24px 0px 0px 0px'>
