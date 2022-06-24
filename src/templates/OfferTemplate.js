@@ -43,7 +43,7 @@ export default function OfferTemplate({ data }) {
       <PageSection>
         <Section mobile='0 0 32px'>
           <Wrapper mobile='30px 0 42px' tabletPadding='24px 108px'>
-            <InternalLink isOfferTemplate={true} to={routeLinks.offer}>
+            <InternalLink isOfferTemplate={true} to={routeLinks.offer()}>
               <Flex items='center' gap='10'>
                 <Arrow isOfferTemplate={true} />
                 <span>Wróć do "oferta"</span>
