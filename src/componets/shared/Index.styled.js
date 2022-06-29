@@ -143,6 +143,7 @@ export const Figure = styled.figure`
     & img {
       width: 100%;
       border-radius: 16px;
+      max-height: 500px;
     }
   }
 

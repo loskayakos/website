@@ -39,7 +39,7 @@ const AboutUs = () => {
         <Flex wrap='wrap' gap='35'>
           <Flex direction='column' basis='calc(100% / 2 - (35px - 35px / 2))' content='center' items='center' gap='20'>
             <NounCash />
-            <SubSectionTitle isWhiteColor={true}>{page.title_graphic_2}</SubSectionTitle>
+            <SubSectionTitle isWhiteColor={true}>{page.title_graphic_1}</SubSectionTitle>
           </Flex>
 
           <Flex direction='column' basis='calc(100% / 2 - (35px - 35px / 2))' content='center' items='center' gap='20'>
