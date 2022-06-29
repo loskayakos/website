@@ -310,7 +310,13 @@ collections:
           hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w slider',
         }
       - { label: 'Nazwa zdjęcia', name: 'reservation_picture_alt', widget: string, hint: 'wpisujemy tytuł zdjęcia' }
-      - { label: 'Krótki Opis', name: 'short_description', widget: string, hint: 'wpisujemy, krótki opis przy kroku' }
+      - {
+          label: 'Krótki Opis',
+          name: 'short_description',
+          widget: string,
+          required: false,
+          hint: 'wpisujemy, krótki opis przy kroku',
+        }
       - {
           label: 'Order',
           name: 'order',
