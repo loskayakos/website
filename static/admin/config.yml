@@ -395,7 +395,13 @@ collections:
           hint: 'Wpisujemy adres pod jakim będzie się wyświetlać strona musi być identyczny jak w ofercie',
         }
       - { label: 'Tytuł Strony', name: 'title_offer_details', widget: 'string', hint: 'wpisujemy nagłówek strony' }
-      - { label: 'Tekst', name: 'body', widget: 'markdown', hint: 'krótki tekst pod tytułem strony oferty' }
+      - {
+          label: 'Tekst',
+          name: 'body',
+          widget: 'markdown',
+          required: false,
+          hint: 'krótki tekst pod tytułem strony oferty',
+        }
       - {
           label: 'Zdjęcie prawe',
           name: 'offer-details_picture_right',
