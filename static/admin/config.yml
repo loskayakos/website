@@ -262,7 +262,13 @@ collections:
       - { label: 'Nazwa', name: 'name', widget: 'string' }
       - { label: 'Tytuł sekcji', name: 'title_section_prices', widget: 'string', hint: 'np. Cennik ' }
       - { label: 'Tytuł cennika', name: 'title', widget: 'string', hint: 'np. Ceny wynajmu kajaków ' }
-      - { label: 'Opis cennika', name: 'description_prices_list', widget: 'string', hint: 'krótki opis cennika ' }
+      - {
+          label: 'Opis cennika',
+          name: 'description_prices_list',
+          widget: 'string',
+          required: false,
+          hint: 'krótki opis cennika ',
+        }
       - {
           label: 'Tytuł kolumny cennika 1',
           name: 'column_title_1',
