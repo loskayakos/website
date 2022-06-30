@@ -143,3 +143,19 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig, loaders, plugins }
   }
   actions.replaceWebpackConfig(config)
 }
+const typeDefs = `
+    type markdownRemark implements Node {
+        // Use custom frontmatter type
+        frontmatter: Frontmatter
+    }
+    // Define custom frontmatter type
+    type FrontMatter {
+      // Nullable array of Feature elements
+      prices: [Prices]
+    }
+    // // Feature has nullable fields title and description
+    // type Prices {
+    //   frontmatter: Frontmatter
+    // }
+    // type 
+`
