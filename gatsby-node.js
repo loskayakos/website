@@ -143,7 +143,9 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig, loaders, plugins }
   }
   actions.replaceWebpackConfig(config)
 }
-const typeDefs = `
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
     type markdownRemark implements Node {
         // Use custom frontmatter type
         frontmatter: Frontmatter
@@ -164,3 +166,5 @@ const typeDefs = `
       name_price: String
     }
 `
+  createTypes(typeDefs)
+}
