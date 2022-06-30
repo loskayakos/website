@@ -5,6 +5,6 @@ name: kajak weekand i święta
 price: 60
 price_1: 100
 price_2: 80
-price_3: 0
+price_3: ""
 name_price: Kajak (pt. - nd., święta)
 ---
