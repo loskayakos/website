@@ -153,9 +153,14 @@ const typeDefs = `
       // Nullable array of Feature elements
       prices: [Prices]
     }
-    // // Feature has nullable fields title and description
-    // type Prices {
-    //   frontmatter: Frontmatter
-    // }
-    // type 
+    // Feature has nullable Frontmatter
+    type Prices {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      price_1: String
+      price_2: String
+      price_3: String
+      name_price: String
+    }
 `
