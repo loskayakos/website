@@ -143,28 +143,37 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig, loaders, plugins }
   }
   actions.replaceWebpackConfig(config)
 }
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
-  const typeDefs = `
-    type markdownRemark implements Node {
-        // Use custom frontmatter type
-        frontmatter: Frontmatter
-    }
-    // Define custom frontmatter type
-    type FrontMatter {
-      // Nullable array of Feature elements
-      prices: [Prices]
-    }
-    // Feature has nullable Frontmatter
-    type Prices {
-      frontmatter: Frontmatter
-    }
-    type Frontmatter {
-      price_1: String
-      price_2: String
-      price_3: String
-      name_price: String
-    }
-`
-  createTypes(typeDefs)
-}
+// exports.createSchemaCustomization = ({ actions }) => {
+//   const { createTypes } = actions
+//   const typeDefs = `
+//     type markdownRemark implements Node {
+
+//         frontmatter: Frontmatter
+//     }
+
+//     type FrontMatter {
+
+//       prices: [Prices]
+//     }
+
+//     type Prices {
+//       frontmatter: Frontmatter
+//     }
+//     type Frontmatter {
+//       price_1: String
+//       price_2: String
+//       price_3: String
+//       name_price: String
+//     }
+// `
+//   createTypes(typeDefs)
+// }
+// exports.createSchemaCustomization = ({ actions }) => {
+//   const { createTypes } = actions
+//   const typeDefs = `
+//     type  MarkdownRemarkFrontmatter implements Node @dontInfer {
+//       price_3: Number
+//     }
+//   `
+//   createTypes(typeDefs)
+// }
