@@ -229,9 +229,9 @@ collections:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'prices' }
       - { label: 'ID ceny', name: 'price_id', widget: 'string', hint: 'niepowtarzalne ID np. ceny kajak weekand ' }
       - { label: 'Nazwa', name: 'name', widget: 'string', hint: 'nazwa pod jaką chcemy zapisać' }
-      - { label: 'Cena 1-2dni ', name: 'price_1', widget: 'number', hint: 'cena bez pln lub zł' }
-      - { label: 'Cena 2-5dni ', name: 'price_2', widget: 'number', hint: 'cena bez pln lub zł' }
-      - { label: 'Cena powyżej 5dni ', name: 'price_3', widget: 'number', hint: 'cena bez pln lub zł' }
+      - { label: 'Cena 1-2dni ', name: 'price_1', widget: 'number', required: false, hint: 'cena bez pln lub zł' }
+      - { label: 'Cena 2-5dni ', name: 'price_2', widget: 'number', required: false, hint: 'cena bez pln lub zł' }
+      - { label: 'Cena powyżej 5dni ', name: 'price_3', widget: 'number', required: false, hint: 'cena bez pln lub zł' }
       - {
           label: 'Nazwa ceny',
           name: 'name_price',
