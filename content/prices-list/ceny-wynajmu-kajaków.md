@@ -7,12 +7,10 @@ prices_list_id: Ceny wynajmu kajaków
 name: Ceny wynajmu kajaków
 title_section_prices: Cennik
 title: Ceny wynajmu kajaków
-description_prices_list: Lorem ipsum dolor sit amet, consectetur adipiscing
-  elit. Ut rhoncus eros mi, vitae malesuada nulla hendrerit id.
-column_title_1: 1 - 2 dni
-column_title_2: 3-5 dni*
-column_title_3: powyżej 5 dni*
+description_prices_list: ""
+column_title_1: Do 5 kajaków
+column_title_2: Powyżej 5 kajaków
+column_title_3: ""
 price_id: Ceny wynajmu kajaków
-star: "*   Cena obowiązuje przy wynajmie kajaków powyżej 4 dni bez codziennych
-  odbiorów i dowozów sprzętu."
+star: ""
 ---
