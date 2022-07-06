@@ -116,7 +116,13 @@ collections:
           hint: 'robimy upload zdjęcia, które chcemy aby było wyświetlane w slider',
         }
       - { label: 'Nazwa zdjęcia', name: 'offer_picture_alt', widget: string, hint: 'wpisujemy tytuł zdjęcia' }
-      - { label: 'Krótki Opis', name: 'short_description', widget: string, hint: 'krótki opis w kafelku pod zdjęciem' }
+      - {
+          label: 'Krótki Opis',
+          name: 'short_description',
+          widget: string,
+          required: false,
+          hint: 'krótki opis w kafelku pod zdjęciem',
+        }
 
   - name: 'how-do-we-work' # Used in routes, e.g., /admin/collections/blog
     label: 'Jak działamy' # Used in the UI
