@@ -172,7 +172,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'offer-subpage' }
       - { label: 'Title', name: 'title', widget: 'string', hint: 'tutuł podstrony oferta' }
-      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'krótki tekst pod tytułem' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false, hint: 'krótki tekst pod tytułem' }
 
   - name: 'gallery-slider' # Used in routes, e.g., /admin/collections/blog
     label: 'Galeria-Slider' # Used in the UI
