@@ -1,12 +1,9 @@
 ---
 layout: work
 number_step: "2"
-title: Tytuł kroku 2
+title: Zdecyduj co po spływie
 work_picture: ../../static/images/frame-17.jpg
 work_picture_alt: ludzie płyną kajakami
-short_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum facilisis ex vitae lorem pretium, ac consectetur ante malesuada.
-  Pellentesque bibendum scelerisque condimentum. Nullam sed nibh mauris.
-  Pellentesque lacinia, est nec euismod ullamcorper,
+short_description: W naszej ofercie zapewniamy również ognisko lub grill a także pole namiotowe.
 order: 2
 ---
