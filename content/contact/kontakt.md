@@ -1,7 +1,7 @@
 ---
 layout: contact
 title: Kontakt
-phone: 500 500 500
-email: test@op.pl
+phone: "533172000"
+email: zamowienia@loskayakos.pl
 location: Kielce, Świetokrzyskie
 ---
