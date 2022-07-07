@@ -27,6 +27,11 @@ module.exports = {
         background_color: `#52782C`,
         theme_color: `#272B30`,
         display: `standalone`,
+        icon_options: {
+          // For all the options available,
+          // please see the section "Additional Resources" below.
+          purpose: `any maskable`,
+        },
       },
     },
 
