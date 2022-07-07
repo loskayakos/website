@@ -61,9 +61,11 @@ const OfferWrapper = styled.div`
   transition-duration: 0.4s;
   will-change: box-shadow;
   box-shadow: 0.7s cubic-bezier(0.08, 0.635, 0.25, 0.995);
+  margin: 0 auto;
 
   @media ${variables.device.tabletXL} {
     padding: 28.5px 0;
+    margin: 0;
     /* will-change: transform, box-shadow;
     transition: transform 1.2s cubic-bezier(0.08, 0.635, 0.25, 0.995),
       box-shadow 0.7s cubic-bezier(0.08, 0.635, 0.25, 0.995); */
@@ -101,6 +103,7 @@ const ArrowDescription = styled.span`
 
   color: #2764ab;
 `
+
 const Offer = ({ isOfferSubpage }) => {
   const data = useStaticQuery(graphql`
     {
@@ -130,7 +133,7 @@ const Offer = ({ isOfferSubpage }) => {
 
   return (
     <OfferSection mobile={isOfferSubpage ? '48px 20px 0 20px' : '84px 20px 0 20px'} tabletPadding='0 0 0 5.5%'>
-      <Wrapper paddingTablet='0 0 16px'>
+      <Wrapper paddingTablet='0 0 16px' mobile='0 0 8px'>
         {isOfferSubpage ? '' : <SectionTitle color='#101213'>Poznaj naszą ofertę</SectionTitle>}
       </Wrapper>
 
