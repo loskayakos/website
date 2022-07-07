@@ -26,7 +26,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#52782C`,
         theme_color: `#272B30`,
-        display: `standalone`,
+        display: `minimal-ui`,
         icon_options: {
           // For all the options available,
           // please see the section "Additional Resources" below.
