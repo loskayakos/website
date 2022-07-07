@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Los Kayakos`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.loskayakos.pl`,
+    description: 'Organizacja spływów kajakowych na rzece Nida ',
   },
   flags: { PRESERVE_WEBPACK_CACHE: true, FAST_DEV: true },
   plugins: [
@@ -20,10 +21,21 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',
+        name: `Los Kayakos`,
+        short_name: `Los Kayakos`,
+        start_url: `/`,
+        background_color: `#52782C`,
+        theme_color: `#272B30`,
+        display: `standalone`,
       },
     },
 
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-responsive-iframe`],
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     `gatsby-plugin-postcss`,
