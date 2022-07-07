@@ -54,7 +54,7 @@ collections:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'media' }
       - {
           label: 'Facebook',
-          name: 'fecebook',
+          name: 'facebook',
           widget: 'string',
           hint: 'URL path : https://www.facebook.com/twojafirma',
         }
