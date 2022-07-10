@@ -196,7 +196,7 @@ const Offer = ({ isOfferSubpage }) => {
 
               return (
                 <SwiperSlide>
-                  <InternalLink to={routeLinks.offer(page.slug)}>
+                  <InternalLink to={page.slug === 'kajaki' ? routeLinks.offer(page.slug) : routeLinks.reservation}>
                     <OfferWrapper key={id}>
                       <Figure>
                         <GatsbyImage image={image} alt={page.offer_picture_alt} className='offer-img' />
@@ -209,10 +209,17 @@ const Offer = ({ isOfferSubpage }) => {
                           <Wrapper mobile='4px 0 0'>
                             <OfferDescription>{page.short_description}</OfferDescription>
                           </Wrapper>
-                          {isOfferSubpage && (
+                          {page.slug === 'kajaki' ? (
                             <Wrapper paddingTablet='16px 0 0'>
                               <Flex tabletItems='center' tabletGap='6' tabletContent='flex-end'>
                                 <ArrowDescription>Szczegóły</ArrowDescription>
+                                <ArrowOffer />
+                              </Flex>
+                            </Wrapper>
+                          ) : (
+                            <Wrapper paddingTablet='16px 0 0'>
+                              <Flex tabletItems='center' tabletGap='6' tabletContent='flex-end'>
+                                <ArrowDescription>Zarezerwuj</ArrowDescription>
                                 <ArrowOffer />
                               </Flex>
                             </Wrapper>
