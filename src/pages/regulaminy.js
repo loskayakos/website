@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Page from '../layout/Page'
 import styled from 'styled-components'
-import ContactForm from '../componets/shared/ContactForm'
 
 export default function Statute() {
   return (
