@@ -11,4 +11,5 @@ export const routeLinks = {
   statute: '/regulamin',
   cookiesPolicy: '/polityka-cookies',
   privacyPolicy: '/polityka-prywatnosci',
+  reservation: '/rezerwacja',
 }
