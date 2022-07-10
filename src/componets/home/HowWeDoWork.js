@@ -118,13 +118,13 @@ const HowWeDoWork = () => {
                 </Wrapper>
               )}
 
-              {index % 2 && index < edges.length - 1 ? (
+              {/* {index % 2 && index < edges.length - 1 ? (
                 <NounArrow isArrowDownLeft={true} />
               ) : index == edges.length - 1 ? (
                 ''
               ) : (
                 <NounArrow isArrowDownRight={true} />
-              )}
+              )} */}
             </>
           )
         })}
