@@ -3,7 +3,6 @@ import Page from '../layout/Page'
 import styled from 'styled-components'
 import { Section } from '../componets/shared/Index.styled'
 import variables from '../styles/variables'
-import ContactForm from '../componets/shared/ContactForm'
 
 const BookeroSection = styled(Section)`
   display: flex;
