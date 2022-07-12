@@ -31,7 +31,7 @@ padding: 0.75rem 0.75rem;
   -webkit-text-fill-color: black;
 }
 `
-const CustomForm = styled.form`
+const CustomForm = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 48px;
