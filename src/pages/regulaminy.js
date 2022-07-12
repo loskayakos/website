@@ -6,11 +6,13 @@ export default function Statute() {
   return (
     <Page>
       <h1>Regulaminy</h1>
-      <a href={`Regulamin-kajaków.odt`} download>
-        Download the file that is already in your static folder
-      </a>
       <div>
-        <a href={`Regulamin-kajaków.odt`} download>
+        <a href={'/Regulamin-kajaków.odt'} download>
+          / Download the file that is already in your static folder />
+        </a>
+      </div>
+      <div>
+        <a href={`/Regulamin-kajaków.odt`} download>
           Download the file that is already in your static folder
         </a>
       </div>
