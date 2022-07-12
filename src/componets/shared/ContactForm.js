@@ -225,7 +225,7 @@ export default function ContactForm() {
 
         <label htmlFor='road'>
           Wybierz trasę:
-          <Select name='road' component='select' required>
+          <Select name='road' component='select'>
             <option hidden> -- Wybierz swoją trasę spływu -- </option>
           </Select>{' '}
         </label>
