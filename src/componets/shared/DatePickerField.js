@@ -12,11 +12,10 @@ const DatePickerField = ({ ...props }) => {
       placeholder='wybierz datę i godzinę spływu'
       locale='pl'
       showTimeSelect
-      selected={new Date() || null}
-      dateFormat='MMMM d, yyyy h:mm aa'
+      selected={props.value}
+      dateFormat='yyyy-mm-dd HH:mm'
       onChange={val => {
-        console.log(val)
-        // setFieldValue(field.name, val)
+        props.handleChange(val)
       }}
     />
   )

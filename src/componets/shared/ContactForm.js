@@ -242,7 +242,10 @@ const encode = data => {
 }
 
 function ContactForm() {
-  const [data, setData] = useState()
+  const [data, setData] = useState({
+    date: new Date(),
+  })
+  const [successMsg, setSuccessMsg] = useState()
 
   const handleSubmit = e => {
     fetch('/', {
@@ -250,7 +253,12 @@ function ContactForm() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...data }),
     })
-      .then(() => alert('Success!'))
+      .then(() => {
+        setSuccessMsg('Wiadomośc została wysłana')
+        setTimeout(() => {
+          setSuccessMsg('')
+        }, 4000)
+      })
       .catch(error => alert(error))
 
     e.preventDefault()
@@ -281,18 +289,32 @@ function ContactForm() {
       </label>
       <label htmlFor='date'>
         Wybierz datę i godzinę spływu:
-        <DatePickerField name='date' type='datetime' placeholder='Wybierz datę i godzinę spływu ' required />{' '}
+        <DatePickerField
+          value={data.date}
+          name='date'
+          type='datetime'
+          placeholder='Wybierz datę i godzinę spływu lub eventu'
+          handleChange={handleChange}
+          required
+        />{' '}
       </label>
       <label htmlFor='email'>
-        Email: <Input name='email' placeholder='email' type='email' required onChange={handleChange} />
+        Email: <Input name='email' placeholder='Email' type='email' required onChange={handleChange} />
       </label>
       <label htmlFor='phone'>
         Telefon:
-        <Input name='phone' placeholder='telefon' type='tel' required onChange={handleChange} />{' '}
+        <Input name='phone' placeholder='Telefon' type='tel' required onChange={handleChange} />{' '}
       </label>
       <label htmlFor='number'>
         Ilość osób:{' '}
-        <Input name='number' keyboardType='numeric' placeholder='podaj ilość osób' required onChange={handleChange} />
+        <Input
+          name='number'
+          type='number'
+          keyboardType='numeric'
+          placeholder='podaj ilość osób'
+          required
+          onChange={handleChange}
+        />
       </label>
       <label htmlFor='road'>
         Wybierz trasę:
@@ -312,6 +334,7 @@ function ContactForm() {
         />{' '}
       </label>
       <Submit type='submit'>Wyślij</Submit>
+      {successMsg && <p>{successMsg}</p>}
     </CustomForm>
     // <Formik
     //   initialValues={{ fullName: '', email: '' }}

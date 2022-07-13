@@ -8,7 +8,7 @@ export const routeLinks = {
   raftingRoutes: '/trasy-splywow',
   gallery: '/galeria',
   contact: '/kontakt',
-  statute: '/regulamin',
+  statute: '/regulaminy',
   cookiesPolicy: '/polityka-cookies',
   privacyPolicy: '/polityka-prywatnosci',
   reservation: '/rezerwacja',
