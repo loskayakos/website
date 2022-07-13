@@ -240,35 +240,59 @@ const encode = data => {
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
+
 function ContactForm() {
+  const [data, setData] = useState()
+
+  const handleSubmit = e => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.state }),
+    })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error))
+
+    e.preventDefault()
+  }
+
+  const handleChange = e => setData({ ...data, [e.target.name]: e.target.value })
+
   return (
-    <CustomForm name='contact' method='post' data-netlify='true' data-netlify-honeypot='bot-field'>
+    <CustomForm
+      name='contact'
+      method='post'
+      data-netlify='true'
+      data-netlify-honeypot='bot-field'
+      onSubmit={handleSubmit}
+    >
       {/* <input name='name' placeholder='Your Name' type='text' />
       <input name='email' placeholder='name@name.com' type='email' />
       <textarea name='message' />
       <button>Send</button> */}
-      <Input type='hidden' name='form-name' value='contact' />
-      <Input type='hidden' name='bot-field' />
+      <Input type='hidden' name='form-name' value='contact' onChange={handleChange} />
+      <Input type='hidden' name='bot-field' onChange={handleChange} />
       <label htmlFor='name'>
-        Imię: <Input name='name' placeholder='Imię ' type='text' required />
+        Imię: <Input name='name' placeholder='Imię ' type='text' required onChange={handleChange} />
       </label>
       <label htmlFor='surname '>
         Nazwisko:
-        <Input name='surname ' placeholder='Nazwisko ' type='text' required />{' '}
+        <Input name='surname ' placeholder='Nazwisko ' type='text' required onChange={handleChange} />{' '}
       </label>
       <label htmlFor='date'>
         Wybierz datę i godzinę spływu:
         <DatePickerField name='date' type='datetime' placeholder='Wybierz datę i godzinę spływu ' required />{' '}
       </label>
       <label htmlFor='email'>
-        Email: <Input name='email' placeholder='email' type='email' required />
+        Email: <Input name='email' placeholder='email' type='email' required onChange={handleChange} />
       </label>
       <label htmlFor='phone'>
         Telefon:
-        <Input name='phone' placeholder='telefon' type='tel' required />{' '}
+        <Input name='phone' placeholder='telefon' type='tel' required onChange={handleChange} />{' '}
       </label>
       <label htmlFor='number'>
-        Ilość osób: <Input name='number' keyboardType='numeric' placeholder='podaj ilość osób' required />
+        Ilość osób:{' '}
+        <Input name='number' keyboardType='numeric' placeholder='podaj ilość osób' required onChange={handleChange} />
       </label>
       <label htmlFor='road'>
         Wybierz trasę:
@@ -278,7 +302,14 @@ function ContactForm() {
       </label>
       <label htmlFor='message'>
         Message:
-        <Textarea name='message' component='textarea' placeholder='Zostaw nam wiadomość' rows='4' fullWidth />{' '}
+        <Textarea
+          name='message'
+          component='textarea'
+          placeholder='Zostaw nam wiadomość'
+          rows='4'
+          fullWidth
+          onChange={handleChange}
+        />{' '}
       </label>
       <Submit type='submit'>Wyślij</Submit>
     </CustomForm>
