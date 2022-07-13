@@ -234,6 +234,10 @@ const Submit = styled.button`
 const Textarea = styled.textarea`
   ${InputBase};
   width: 100%;
+  font-family: inherit;
+  &&::placeholder {
+    font-family: inherit;
+  }
 `
 const encode = data => {
   return Object.keys(data)
