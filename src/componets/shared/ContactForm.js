@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import DatePickerField from './DatePickerField'
+import Road from './Road'
 
 export const InputBase = `
 background-color: white;
@@ -79,18 +80,7 @@ const CustomForm = styled.form`
     }
   }
 `
-const Select = styled.select`
-  background-color: white;
-  border: 1px solid #52782c;
-  border-radius: 4px;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  width: 100%;
-  margin-top: 0.5rem;
-  padding: 0.75rem 0.75rem;
-`
+
 const Input = styled.input`
   ${InputBase};
 `
@@ -171,6 +161,7 @@ function ContactForm() {
 
   const handleChange = e => setData({ ...data, [e.target.name]: e.target.value })
   const handleChangeDate = value => setData({ ...data, date: value })
+  const handleChangeRoad = value => setData({ ...data, road: value })
 
   return (
     <CustomForm
@@ -218,12 +209,9 @@ function ContactForm() {
           onChange={handleChange}
         />
       </label>
-      <label htmlFor='road'>
-        Wybierz trasę:
-        <Select name='road' component='select'>
-          <option hidden> -- Wybierz swoją trasę spływu -- </option>
-        </Select>{' '}
-      </label>
+      <label htmlFor='road'>Wybierz trasę:</label>
+      <Road onChangeParent={value => handleChangeRoad(value)} />
+
       <label htmlFor='message'>
         Message:
         <Textarea
