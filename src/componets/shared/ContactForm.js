@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import variables from '../../styles/variables'
 import DatePickerField from './DatePickerField'
 import Road from './Road'
 
@@ -130,6 +131,11 @@ const Textarea = styled.textarea`
     font-family: inherit;
   }
 `
+const SuccessMsg = styled.p`
+  font-weight: 900;
+  font-size: 20px;
+  color: ${variables.color.primary};
+`
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -209,11 +215,13 @@ function ContactForm() {
           onChange={handleChange}
         />
       </label>
-      <label htmlFor='road'>Wybierz trasę:</label>
-      <Road onChangeParent={value => handleChangeRoad(value)} />
+      <label htmlFor='road'>
+        Wybierz trasę:
+        <Road onChangeParent={value => handleChangeRoad(value)} />
+      </label>
 
       <label htmlFor='message'>
-        Message:
+        Wiadomość:
         <Textarea
           name='message'
           component='textarea'
@@ -224,7 +232,7 @@ function ContactForm() {
         />{' '}
       </label>
       <Submit type='submit'>Wyślij</Submit>
-      {successMsg && <p>{successMsg}</p>}
+      {successMsg && <SuccessMsg>{successMsg}</SuccessMsg>}
     </CustomForm>
   )
 }

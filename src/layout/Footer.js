@@ -3,7 +3,6 @@ import { Flex, InternalLink, Section } from '../componets/shared/Index.styled'
 import Media from '../componets/shared/Media'
 import Company from '../componets/shared/Company'
 import Contact from '../componets/shared/Contact'
-import { Link } from 'gatsby'
 import { routeLinks } from './../config/routing'
 
 const Footer = () => {
@@ -17,10 +16,13 @@ const Footer = () => {
         </Flex>
       </Section>
 
-      <Section mobile='0 0 48px' tabletPadding='0 0 52px'>
+      <Section mobile='0 0 48px' tabletPadding='0 0 52px' background='#272B30'>
         <Flex gap='16' direction='column' items='center' content='center' tabletDirection='row' tabletGap='24'>
-          © {new Date().getFullYear()} Los Kayakos. All rights reserved.{' '}
-          <InternalLink to={routeLinks.statute}>Regulaminy</InternalLink>
+          <p style={{ color: '#fff' }}>© {new Date().getFullYear()} Los Kayakos. All rights reserved. </p>
+
+          <InternalLink to={routeLinks.statute} style={{ color: '#fff' }}>
+            Regulaminy
+          </InternalLink>
         </Flex>
       </Section>
     </>
