@@ -505,4 +505,4 @@ collections:
           widget: 'string',
           hint: 'wpisujemy dokładny url z google maps np.https://www.google.com/maps/d/u/0/embed?mid=1-5HqoLXcejb-KelrjzVazMgs9LL95xbF&ehbc=2E312F',
         }
-      - { label: 'Tekst', name: 'body', widget: 'markdown', hint: 'krótki tekst jako opis trasy' }
+      - { label: 'Tekst', name: 'body', widget: 'markdown', required: false, hint: 'krótki tekst jako opis trasy' }
