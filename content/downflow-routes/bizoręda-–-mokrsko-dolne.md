@@ -11,4 +11,3 @@ description_recommended: "Czy polecana dla rodzin z dziećmi:"
 recommended: nie
 map: https://www.google.com/maps/d/u/0/embed?mid=15mib4kgRZbPtrh56-BzcXKjsaZ1sLq8T&ehbc=2E312F
 ---
-Opis
