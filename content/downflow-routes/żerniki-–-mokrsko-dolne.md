@@ -11,4 +11,3 @@ description_recommended: "Polecana dla rodzin z dziećmi:"
 recommended: tak
 map: https://www.google.com/maps/d/u/0/embed?mid=1yoiSKQAojq4Gm3KxyrsW7iEcqq-tbsrF&ehbc=2E312F
 ---
-Opis
