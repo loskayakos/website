@@ -11,4 +11,3 @@ description_recommended: "Polecana dla rodzin z dziećmi:"
 recommended: tak
 map: https://www.google.com/maps/d/u/0/embed?mid=1-5HqoLXcejb-KelrjzVazMgs9LL95xbF&ehbc=2E312F
 ---
-Opis trasy
