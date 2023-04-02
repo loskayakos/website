@@ -14,7 +14,7 @@ import variables from '../../styles/variables'
 import { Boat } from '../icons/Boat.icon'
 import { ArrowOffer } from '../icons/ArrowOffer.icon'
 import { routeLinks } from './../../config/routing'
-import oferta from './../../pages/oferta'
+
 
 const OfferSection = styled(Section)`
   @media ${variables.device.tabletXL} {
@@ -144,7 +144,7 @@ const Offer = ({ isOfferSubpage }) => {
             const image = getImage(page.offer_picture)
 
             return (
-              <InternalLink to={routeLinks.offer(page.slug)}>
+              <InternalLink to={page.slug === 'kajaki' ? routeLinks.offer(page.slug) : routeLinks.reservation}>
                 <OfferWrapper key={id}>
                   <Figure>
                     <GatsbyImage image={image} alt={page.offer_picture_alt} className='offer-img' />
