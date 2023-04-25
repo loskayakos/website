@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: CodersBros/Los-Kayakos
+  repo: loskayakos/website
   branch: master
   publish_mode: editorial_workflow
 media_folder: static/images
