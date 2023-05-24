@@ -2,7 +2,7 @@
 layout: offer-subpage
 title: Oferta
 ---
-
+<Gallery images='[{"src":"../../static/images/Logo.png","alt":"cos"},{"src":"../../static/images/frame-17-3-.jpg","alt":"cos"}]' />
 
 Skontaktuj się z nami i zaplanuj wypoczynek na kajakach w sercu Gór Świętokrzyskich!
 
