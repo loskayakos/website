@@ -1,10 +1,6 @@
 ---
 layout: about-us
-bar_achievements:
-  - number: 3
-    label: Sprints
-  - number: 12
-    label: People worked
+bar_achievements: []
 title: spływy kajakowe kielce i okolice
 ---
 Nasz firma powstała z pasji spędzania aktywnie wolnego czasu w gronie przyjaciół. Naszym motywem
