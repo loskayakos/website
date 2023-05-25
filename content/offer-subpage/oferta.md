@@ -4,7 +4,7 @@ title: Oferta
 ---
 <Gallery images='[]' />
 
-<Slider sliderElements='[]' />
+
 
 Skontaktuj się z nami i zaplanuj wypoczynek na kajakach w sercu Gór Świętokrzyskich!
 
