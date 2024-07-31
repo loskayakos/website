@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "^7.2.1",
+    "@formspree/react": "^2.5.1",
     "babel-plugin-styled-components": "^2.0.7",
     "date-fns": "^2.28.0",
     "formik": "^2.2.9",

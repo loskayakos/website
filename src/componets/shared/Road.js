@@ -15,7 +15,7 @@ const Select = styled.select`
   padding: 0.75rem 0.75rem;
 `
 
-const Road = ({ onChangeParent }) => {
+const Road = ({ onChangeParent, value }) => {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(filter: { frontmatter: { layout: { eq: "downflow-routes" } } }) {
@@ -36,7 +36,7 @@ const Road = ({ onChangeParent }) => {
   }
 
   return (
-    <Select name='road' component='select' onChange={handleChange}>
+    <Select name='road' component='select' onChange={handleChange} value={value}>
       <option hidden> -- Wybierz swoją trasę spływu -- </option>
       {edges.map(({ node }) => (
         <option value={node.frontmatter.title} key={node.frontmatter.title}>

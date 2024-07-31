@@ -3,6 +3,7 @@ import Page from '../layout/Page'
 import { Section, PageTitle, Wrapper } from '../componets/shared/Index.styled'
 import ContactForm from './../componets/shared/ContactForm'
 import { Boat } from '../componets/icons/Boat.icon'
+import ContactFormFormspree from '../componets/shared/ContactFormFormspree'
 
 export default function Rezervation() {
   return (
@@ -13,7 +14,8 @@ export default function Rezervation() {
           <PageTitle style={{ textAlign: 'center' }}>Rezerwacja</PageTitle>
         </Wrapper>
 
-        <ContactForm />
+        {/* <ContactForm /> */}
+        <ContactFormFormspree />
       </Section>
     </Page>
   )
