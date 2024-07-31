@@ -239,6 +239,7 @@ const ContactFormFormspree = () => {
             email: '',
             number: '',
             road: '',
+            message: '',
           })
         }, 4000)
       } else {
@@ -323,6 +324,7 @@ const ContactFormFormspree = () => {
           rows='4'
           fullWidth
           onChange={handleChange}
+          value={data.message}
         />{' '}
       </label>
       <Submit type='submit'>Wyślij</Submit>
